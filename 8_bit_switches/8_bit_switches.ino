@@ -17,8 +17,8 @@ CRGB leds[NUM_LEDS];
 
 // Global Variables:
 byte colour = 0;//r,g,b,NO
-byte redChannel   = 0b10000000;
-byte blueChannel  = 0b10000000;
+byte redChannel   = 0b10000000 | 0b01000000;
+byte blueChannel  = 0b10000000 & 0b01000000;
 byte greenChannel = 0b10000000;
 int buttonState = 0;  // variable for reading the pushbutton status
 
