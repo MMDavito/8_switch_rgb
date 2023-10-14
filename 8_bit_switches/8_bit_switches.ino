@@ -26,7 +26,7 @@ int buttonState = 0;  // variable for reading the pushbutton status
 void setup() {
     //FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);  // GRB ordering is typical
     FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // GRB ordering is typical
-    pinMode(BUTTON_PIN, INPUT);    
+    pinMode(BUTTON_PIN, INPUT_PULLUP);    
     attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonClick, RISING);
 
 }
@@ -38,7 +38,6 @@ void loop() {
   leds[3] = CRGB(0,0,blueChannel);
   leds[4] = CRGB(redChannel,greenChannel,blueChannel);
   FastLED.show();
-  delay(500);
 }
 int selectedColour(){
   switch(colour) 
@@ -59,4 +58,5 @@ void buttonClick(){
   } else {
     colour += 1;
   }
+  delay(10);
 }
