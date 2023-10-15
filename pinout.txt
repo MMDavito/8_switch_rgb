@@ -1,0 +1,38 @@
+1 is bottom left
+8 is bottom right
+9 is top right
+16 is top left
+
+1=A
+2=WRen (WriteEngage)
+3=MEMen
+4=dA
+5=outputA
+6=dB
+7=outputB
+8=GND
+
+9=outputC
+10=dC
+11=outputD
+12=dD
+13=D
+14=C
+15=B
+16=VCC
+
+
+how to connect for MSB == dA; LSB ==D
+
+MSB = 
+4
+6
+10
+12
+
+1
+15
+14
+13
+LSB
+
