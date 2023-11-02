@@ -11,7 +11,7 @@
 
 #define DATA_PIN 0
 #define BUTTON_PIN 1  // the number of the pushbutton pin
-#define WR_EN 7  // WriteEngage, active high
+#define WR_EN 2  // WriteEngage, active high
 byte switches [] = { A0,A1,A2,A3,A4,A5,A6,6}; //LSB => MSB
 
 // Define the array of leds
@@ -47,7 +47,6 @@ void loop() {
   leds[3] = CRGB(0, 0, blueChannel);
   leds[4] = CRGB(redChannel, greenChannel, blueChannel);
   FastLED.show();
-  delay(10);
 }
 int selectedColour() {
   switch (colour)
