@@ -1,3 +1,5 @@
+void ICACHE_RAM_ATTR buttonClick();
+
 #include <FastLED.h>
 
 // How many leds in your strip?
@@ -9,10 +11,11 @@
 // Clock pin only needed for SPI based chipsets when not using hardware SPI
 //#define uint8_t byte
 
-#define DATA_PIN 0
-#define BUTTON_PIN 1  // the number of the pushbutton pin
-#define WR_EN 2  // WriteEngage, active high
-byte switches [] = { A0,A1,A2,A3,A4,A5,A6,6}; //LSB => MSB
+#define DATA_PIN D4
+#define BUTTON_PIN D2  // the number of the pushbutton pin
+#define WR_EN D3  // WriteEngage, active high
+//Will expand number of bits once I start soldering more ATMEGA328
+byte switches [] = { 0, 0,D3,D4,D5,D6,D7,D8}; //LSB => MSB
 
 // Define the array of leds
 CRGB leds[NUM_LEDS];
@@ -22,12 +25,32 @@ byte colour = 0;//r,g,b,NO
 byte redChannel   = 0b00000000 | 0b01000000;
 byte blueChannel  = 0b10000001 & 0b01000001;
 byte greenChannel = 0b01000000;
+
+unsigned long button_time = 0;  
+unsigned long last_button_time = 0; 
+
+unsigned long led_write_time = 0;  
+unsigned long last_led_write_time = 0; 
+
 int buttonState = 0;  // variable for reading the pushbutton status
+
+void buttonClick() {
+  button_time = millis();
+  if (button_time - last_button_time > 250)
+  {
+    last_button_time = button_time;
+    if (colour == 3) {
+      colour = 0;
+    } else {
+      colour += 1;
+    }
+  }
+}
 
 
 void setup() {
   //FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);  // GRB ordering is typical
-  for (unsigned i = 0; i < 8; i++)  {
+  for (unsigned i = 7; i < 8; i++)  {
         pinMode (switches [i], INPUT);
   }
   pinMode(WR_EN, INPUT);
@@ -46,7 +69,12 @@ void loop() {
   leds[2] = CRGB(0, greenChannel, 0);
   leds[3] = CRGB(0, 0, blueChannel);
   leds[4] = CRGB(redChannel, greenChannel, blueChannel);
-  FastLED.show();
+  led_write_time = millis();
+  if (led_write_time - last_led_write_time > 250)
+  {
+    FastLED.show();
+    last_led_write_time = led_write_time;    
+  }
 }
 int selectedColour() {
   switch (colour)
@@ -61,18 +89,12 @@ int selectedColour() {
       return CRGB::Black;
   }
 }
-void buttonClick() {
-  if (colour == 3) {
-    colour = 0;
-  } else {
-    colour += 1;
-  }
-  delay(10);
-}
+
 void setChannelFromSwitches() {
   //Call this only if WR_EN is enabled
   byte temp = 0b00000000;
-  for (unsigned i = 0; i < 8; i++) {
+  //TODO: reset to number of used switches later!
+  for (unsigned i = 7; i < 8; i++) {
     bool isHigh = digitalRead(switches[i]) == HIGH;
     if (isHigh) {
       switch (i) {
