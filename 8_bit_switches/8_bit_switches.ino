@@ -19,7 +19,7 @@
 #define MEM_EN A5 // Will allow to write to serial; either memory or switch state (TOOD implement!)
 
 //Will expand number of bits once I start soldering more ATMEGA328
-byte switches [] = { 5, 6, 7, 8, 9, 10 , 11, 12}; //LSB => MSB
+byte switches [] = { 5, 6, 7, 8, 9, 10 , 12, 13}; //LSB => MSB
 byte switchValues = 0b10000000;
 
 // Define the array of leds
@@ -51,7 +51,8 @@ void buttonClick() {
   }
 }
 void setLedColors(){
-  leds[0] = selectedColor();
+  //leds[0] = selectedColor();
+  leds[0] = CRGB(channelValues[0], 0, 0);
   leds[1] = CRGB(channelValues[0], 0, 0);
   leds[2] = CRGB(0, channelValues[1], 0);
   leds[3] = CRGB(0, 0, channelValues[2]);
@@ -59,6 +60,8 @@ void setLedColors(){
   leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
 }
 void writeToSerial(){
+  Serial.println("Color is:");
+  Serial.println(color);
   if(digitalRead(MEM_EN) == HIGH){
     //Write from memory:
     Serial.println(channelValues[color]);
@@ -139,7 +142,7 @@ void readSwitches() {
   //Call this only if WR_EN is enabled
   byte temp = 0b00000000;
   //TODO: reset to number of used switches later!
-  for (unsigned i = 0; i < 8; i++) {
+  for (unsigned i = 6; i < 8; i++) {
     bool isHigh = digitalRead(switches[i]) == HIGH;
     if (isHigh) {
       switch (i) {
