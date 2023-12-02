@@ -1,6 +1,7 @@
-void ICACHE_RAM_ATTR buttonClick();
-
+//void ICACHE_RAM_ATTR buttonClick();
+#include <EEPROM.h>
 #include <FastLED.h>
+
 
 // How many leds in your strip?
 #define NUM_LEDS 5
@@ -11,20 +12,23 @@ void ICACHE_RAM_ATTR buttonClick();
 // Clock pin only needed for SPI based chipsets when not using hardware SPI
 //#define uint8_t byte
 
-#define DATA_PIN D4
-#define BUTTON_PIN D2  // the number of the pushbutton pin
-#define WR_EN D3  // WriteEngage, active high
+#define BUTTON_PIN 2  // the number of the pushbutton pin
+//Pin 3 could be used as interrupt
+#define DATA_PIN 4 // Pin to connect resistor and RGB-strip to
+#define WR_EN A4 // WriteEngage, active high
+#define MEM_EN A5 // Will allow to write to serial; either memory or switch state (TOOD implement!)
+
 //Will expand number of bits once I start soldering more ATMEGA328
-byte switches [] = { 0, 0,D3,D4,D5,D6,D7,D8}; //LSB => MSB
+byte switches [] = { 5, 6, 7, 8, 9, 10 , 11, 12}; //LSB => MSB
+byte switchValues = 0b10000000;
 
 // Define the array of leds
 CRGB leds[NUM_LEDS];
 
 // Global Variables:
-byte colour = 0;//r,g,b,NO
-byte redChannel   = 0b00000000 | 0b01000000;
-byte blueChannel  = 0b10000001 & 0b01000001;
-byte greenChannel = 0b01000000;
+volatile byte color = 0;//r,g,b,NO color
+byte colorAddresses[] = {1, 2, 3, 4};//Addresses for EEPROM/rgb; NONE
+byte channelValues[] = {0b10000000, 0b10000000, 0b10000000, 0b00000000};//RGB; NONE
 
 unsigned long button_time = 0;  
 unsigned long last_button_time = 0; 
@@ -39,45 +43,86 @@ void buttonClick() {
   if (button_time - last_button_time > 250)
   {
     last_button_time = button_time;
-    if (colour == 3) {
-      colour = 0;
+    if (color == 3) {
+      color = 0;
     } else {
-      colour += 1;
+      color += 1;
     }
   }
 }
-
+void setLedColors(){
+  leds[0] = selectedColor();
+  leds[1] = CRGB(channelValues[0], 0, 0);
+  leds[2] = CRGB(0, channelValues[1], 0);
+  leds[3] = CRGB(0, 0, channelValues[2]);
+  
+  leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
+}
+void writeToSerial(){
+  if(digitalRead(MEM_EN) == HIGH){
+    //Write from memory:
+    Serial.println(channelValues[color]);
+  }else{
+    //Write from switches:
+    Serial.println(switchValues);
+  }
+}
 
 void setup() {
+  Serial.begin(9600);
+  Serial.println("SETUP");
+  
+  //Initilize EEPROM if not initilized, else read from EEPROM
+  byte initilized = EEPROM.read(0);
+  if(initilized > 0){
+    EEPROM.write(0,0);
+    for(int i=0; i<3; i++){
+      EEPROM.write(colorAddresses[i],channelValues[i]);
+    }
+  }
+  else{
+    for(int i=0; i<3; i++){
+      channelValues[i] = EEPROM.read(colorAddresses[i]);
+    }
+  }
+  
   //FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);  // GRB ordering is typical
   for (unsigned i = 7; i < 8; i++)  {
         pinMode (switches [i], INPUT);
   }
   pinMode(WR_EN, INPUT);
-  FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // GRB ordering is typical
+  pinMode(MEM_EN, INPUT);
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonClick, RISING);
+  
+  FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // GRB ordering is typical
+  
+  setLedColors();
+  led_write_time = millis();
+  FastLED.show();
+  writeToSerial();
 }
 
 void loop() {
   if(digitalRead(WR_EN) == HIGH) {
-  //if(true) {
-    setChannelFromSwitches();
+  //if(false) {
+    //readSwitches();
+    channelValues[color] = switchValues;
+    EEPROM.put(colorAddresses[color], switchValues);
+    
+    setLedColors();
   }
-  leds[0] = selectedColour();
-  leds[1] = CRGB(redChannel, 0, 0);
-  leds[2] = CRGB(0, greenChannel, 0);
-  leds[3] = CRGB(0, 0, blueChannel);
-  leds[4] = CRGB(redChannel, greenChannel, blueChannel);
   led_write_time = millis();
   if (led_write_time - last_led_write_time > 250)
   {
     FastLED.show();
-    last_led_write_time = led_write_time;    
+    writeToSerial();
+    
+    last_led_write_time = led_write_time;  
   }
 }
-int selectedColour() {
-  switch (colour)
+int selectedColor() {
+  switch (color)
   {
     case 0:
       return CRGB::Red;
@@ -90,11 +135,11 @@ int selectedColour() {
   }
 }
 
-void setChannelFromSwitches() {
+void readSwitches() {
   //Call this only if WR_EN is enabled
   byte temp = 0b00000000;
   //TODO: reset to number of used switches later!
-  for (unsigned i = 7; i < 8; i++) {
+  for (unsigned i = 0; i < 8; i++) {
     bool isHigh = digitalRead(switches[i]) == HIGH;
     if (isHigh) {
       switch (i) {
@@ -126,18 +171,5 @@ void setChannelFromSwitches() {
       delay(10);
     }
   }
-  switch (colour)
-  {
-    case 0:
-      redChannel=temp;
-      return;
-    case 1:
-      greenChannel=temp;
-      return;
-    case 2:
-      blueChannel=temp;
-      return;
-    case 3:
-      return;
-  }
+  switchValues = temp;
 }
