@@ -70,7 +70,7 @@ void readSwitches() {
   //Call this only if WR_EN is enabled
   byte temp = 0b00000000;
   //TODO: reset to number of used switches later!
-  for (unsigned i = 6; i < 8; i++) {
+  for (unsigned i = 0; i < 8; i++) {
     bool isHigh = digitalRead(switches[i]) == HIGH;
     if (isHigh) {
       switch (i) {
@@ -107,7 +107,6 @@ void readSwitches() {
 
 void setLedColors(){
   leds[0] = selectedColor();
-  //leds[0] = CRGB(channelValues[0], 0, 0);
   leds[1] = CRGB(channelValues[0], 0, 0);
   leds[2] = CRGB(0, channelValues[1], 0);
   leds[3] = CRGB(0, 0, channelValues[2]);
@@ -144,12 +143,12 @@ void setup() {
   byte initilized = EEPROM.read(0);
   if(initilized > 0){
     EEPROM.write(0,0);
-    for(int i=0; i<3; i++){
+    for(int i=0; i<4; i++){
       EEPROM.write(colorAddresses[i],channelValues[i]);
     }
   }
   else{
-    for(int i=0; i<3; i++){
+    for(int i=0; i<4; i++){
       channelValues[i] = EEPROM.read(colorAddresses[i]);
     }
   }
