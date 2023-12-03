@@ -34,7 +34,7 @@ unsigned long button_time = 0;
 unsigned long last_button_time = 0; 
 
 unsigned long led_write_time = 0;  
-unsigned long last_led_write_time = 0; 
+volatile unsigned long last_led_write_time = 0; 
 
 int buttonState = 0;  // variable for reading the pushbutton status
 
@@ -48,83 +48,11 @@ void buttonClick() {
     } else {
       color += 1;
     }
-  }
-}
-void setLedColors(){
-  //leds[0] = selectedColor();
-  leds[0] = CRGB(channelValues[0], 0, 0);
-  leds[1] = CRGB(channelValues[0], 0, 0);
-  leds[2] = CRGB(0, channelValues[1], 0);
-  leds[3] = CRGB(0, 0, channelValues[2]);
-  
-  leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
-}
-void writeToSerial(){
-  Serial.println("Color is:");
-  Serial.println(color);
-  if(digitalRead(MEM_EN) == HIGH){
-    //Write from memory:
-    Serial.println(channelValues[color]);
-  }else{
-    //Write from switches:
-    Serial.println(switchValues);
+    last_led_write_time = last_led_write_time - 500;
   }
 }
 
-void setup() {
-  Serial.begin(9600);
-  Serial.println("SETUP");
-  
-  //Initilize EEPROM if not initilized, else read from EEPROM
-  byte initilized = EEPROM.read(0);
-  if(initilized > 0){
-    EEPROM.write(0,0);
-    for(int i=0; i<3; i++){
-      EEPROM.write(colorAddresses[i],channelValues[i]);
-    }
-  }
-  else{
-    for(int i=0; i<3; i++){
-      channelValues[i] = EEPROM.read(colorAddresses[i]);
-    }
-  }
-  
-  //FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);  // GRB ordering is typical
-  for (unsigned i = 7; i < 8; i++)  {
-        pinMode (switches [i], INPUT);
-  }
-  pinMode(WR_EN, INPUT);
-  pinMode(MEM_EN, INPUT);
-  pinMode(BUTTON_PIN, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonClick, RISING);
-  
-  FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // GRB ordering is typical
-  
-  setLedColors();
-  led_write_time = millis();
-  FastLED.show();
-  writeToSerial();
-}
-
-void loop() {
-  if(digitalRead(WR_EN) == HIGH) {
-  //if(false) {
-    //readSwitches();
-    channelValues[color] = switchValues;
-    EEPROM.put(colorAddresses[color], switchValues);
-    
-    setLedColors();
-  }
-  led_write_time = millis();
-  if (led_write_time - last_led_write_time > 250)
-  {
-    FastLED.show();
-    writeToSerial();
-    
-    last_led_write_time = led_write_time;  
-  }
-}
-int selectedColor() {
+long selectedColor() {
   switch (color)
   {
     case 0:
@@ -175,4 +103,87 @@ void readSwitches() {
     }
   }
   switchValues = temp;
+}
+
+void setLedColors(){
+  leds[0] = selectedColor();
+  //leds[0] = CRGB(channelValues[0], 0, 0);
+  leds[1] = CRGB(channelValues[0], 0, 0);
+  leds[2] = CRGB(0, channelValues[1], 0);
+  leds[3] = CRGB(0, 0, channelValues[2]);
+  
+  leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
+}
+void writeToSerial(){
+  Serial.println("Color is:");
+  Serial.println(color);
+  Serial.print("Selected Color: ");
+  Serial.println(selectedColor());
+  
+  Serial.println("");
+
+  Serial.print("A4: ");
+  Serial.println(digitalRead(A4));
+  Serial.print("A5: ");
+  Serial.println(digitalRead(A5));
+  
+  if(digitalRead(MEM_EN) == HIGH){
+    //Write from memory:
+    Serial.println(channelValues[color]);
+  }else{
+    //Write from switches:
+    Serial.println(switchValues);
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("SETUP");
+  
+  //Initilize EEPROM if not initilized, else read from EEPROM
+  byte initilized = EEPROM.read(0);
+  if(initilized > 0){
+    EEPROM.write(0,0);
+    for(int i=0; i<3; i++){
+      EEPROM.write(colorAddresses[i],channelValues[i]);
+    }
+  }
+  else{
+    for(int i=0; i<3; i++){
+      channelValues[i] = EEPROM.read(colorAddresses[i]);
+    }
+  }
+  
+  //FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);  // GRB ordering is typical
+  for (unsigned i = 0; i < 8; i++)  {
+        pinMode (switches [i], INPUT);
+  }
+  pinMode(WR_EN, INPUT);
+  pinMode(MEM_EN, INPUT);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonClick, RISING);
+  
+  FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // GRB ordering is typical
+  
+  setLedColors();
+  led_write_time = millis();
+  FastLED.show();
+  writeToSerial();
+}
+
+void loop() {
+  if(digitalRead(WR_EN) == HIGH) {
+  //if(false) {
+    readSwitches();
+    channelValues[color] = switchValues;
+    EEPROM.put(colorAddresses[color], switchValues);
+  }
+  led_write_time = millis();
+  if (led_write_time - last_led_write_time > 250)
+  {
+    setLedColors();
+    FastLED.show();
+    last_led_write_time = millis();
+    writeToSerial();
+  }
 }
