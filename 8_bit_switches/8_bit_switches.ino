@@ -164,7 +164,6 @@ void setup() {
 void loop() {
   if(digitalRead(WR_EN) == HIGH) {
   //if(false) {
-    readSwitches();
     channelValues[color] = switchValues;
     EEPROM.put(colorAddresses[color], switchValues);
   }
@@ -174,6 +173,7 @@ void loop() {
     setLedColors();
     FastLED.show();
     last_led_write_time = millis();
-    writeToSerial();
   }
+  readSwitches();
+  writeToSerial();
 }
