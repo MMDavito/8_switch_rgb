@@ -20,7 +20,8 @@
 
 //Will expand number of bits once I start soldering more ATMEGA328
 byte switches [] = { 5, 6, 7, 8, 9, 10 , 12, 13}; //LSB => MSB
-byte switchValues = 0b10000000;
+byte switchValues = 0b10000000; 
+byte lastWrittenToSerial = 0b00000000;
 
 // Define the array of leds
 CRGB leds[NUM_LEDS];
@@ -69,7 +70,6 @@ long selectedColor() {
 void readSwitches() {
   //Call this only if WR_EN is enabled
   byte temp = 0b00000000;
-  //TODO: reset to number of used switches later!
   for (unsigned i = 0; i < 8; i++) {
     bool isHigh = digitalRead(switches[i]) == HIGH;
     if (isHigh) {
@@ -114,30 +114,21 @@ void setLedColors(){
   leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
 }
 void writeToSerial(){
-  Serial.println("Color is:");
-  Serial.println(color);
-  Serial.print("Selected Color: ");
-  Serial.println(selectedColor());
-  
-  Serial.println("");
-
-  Serial.print("A4: ");
-  Serial.println(digitalRead(A4));
-  Serial.print("A5: ");
-  Serial.println(digitalRead(A5));
-  
   if(digitalRead(MEM_EN) == HIGH){
+    if(lastWrittenToSerial == channelValues[color]) return;
     //Write from memory:
     Serial.println(channelValues[color]);
+    lastWrittenToSerial = channelValues[color];
   }else{
     //Write from switches:
+    if(lastWrittenToSerial == switchValues) return;
     Serial.println(switchValues);
+    lastWrittenToSerial = switchValues;
   }
 }
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("SETUP");
   
   //Initilize EEPROM if not initilized, else read from EEPROM
   byte initilized = EEPROM.read(0);
