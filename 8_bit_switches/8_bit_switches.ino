@@ -20,7 +20,7 @@
 
 //Will expand number of bits once I start soldering more ATMEGA328
 byte switches [] = { 5, 6, 7, 8, 9, 10 , 12, 13}; //LSB => MSB
-byte switchValues = 0b10000000; 
+byte switchValues = 0b10000000;
 byte lastWrittenToSerial = 0b00000000;
 
 // Define the array of leds
@@ -31,11 +31,11 @@ volatile byte color = 0;//r,g,b,NO color
 byte colorAddresses[] = {1, 2, 3, 4};//Addresses for EEPROM/rgb; NONE
 byte channelValues[] = {0b10000000, 0b10000000, 0b10000000, 0b00000000};//RGB; NONE
 
-unsigned long button_time = 0;  
-unsigned long last_button_time = 0; 
+unsigned long button_time = 0;
+unsigned long last_button_time = 0;
 
-unsigned long led_write_time = 0;  
-volatile unsigned long last_led_write_time = 0; 
+unsigned long led_write_time = 0;
+volatile unsigned long last_led_write_time = 0;
 
 int buttonState = 0;  // variable for reading the pushbutton status
 
@@ -105,56 +105,59 @@ void readSwitches() {
   switchValues = temp;
 }
 
-void setLedColors(){
+void setLedColors() {
   leds[0] = selectedColor();
   leds[1] = CRGB(channelValues[0], 0, 0);
   leds[2] = CRGB(0, channelValues[1], 0);
   leds[3] = CRGB(0, 0, channelValues[2]);
-  
+
   leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
 }
-void writeToSerial(){
-  if(digitalRead(MEM_EN) == HIGH){
-    if(lastWrittenToSerial == channelValues[color]) return;
+void writeToSerial() {
+  String temp = "";
+  if (digitalRead(MEM_EN) == HIGH) {
+    if (lastWrittenToSerial == channelValues[color]) return;
     //Write from memory:
-    Serial.println(channelValues[color]);
+    temp = String(channelValues[color]);
     lastWrittenToSerial = channelValues[color];
-  }else{
+  } else {
     //Write from switches:
-    if(lastWrittenToSerial == switchValues) return;
-    Serial.println(switchValues);
+    if (lastWrittenToSerial == switchValues) return;
+    temp = String(switchValues);
     lastWrittenToSerial = switchValues;
   }
+  temp += "\n";
+  Serial.print(temp);
 }
 
 void setup() {
   Serial.begin(9600);
-  
+
   //Initilize EEPROM if not initilized, else read from EEPROM
   byte initilized = EEPROM.read(0);
-  if(initilized > 0){
-    EEPROM.write(0,0);
-    for(int i=0; i<4; i++){
-      EEPROM.write(colorAddresses[i],channelValues[i]);
+  if (initilized > 0) {
+    EEPROM.write(0, 0);
+    for (int i = 0; i < 4; i++) {
+      EEPROM.write(colorAddresses[i], channelValues[i]);
     }
   }
-  else{
-    for(int i=0; i<4; i++){
+  else {
+    for (int i = 0; i < 4; i++) {
       channelValues[i] = EEPROM.read(colorAddresses[i]);
     }
   }
-  
+
   //FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);  // GRB ordering is typical
   for (unsigned i = 0; i < 8; i++)  {
-        pinMode (switches [i], INPUT);
+    pinMode (switches [i], INPUT);
   }
   pinMode(WR_EN, INPUT);
   pinMode(MEM_EN, INPUT);
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonClick, RISING);
-  
+
   FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // GRB ordering is typical
-  
+
   setLedColors();
   led_write_time = millis();
   FastLED.show();
@@ -162,8 +165,8 @@ void setup() {
 }
 
 void loop() {
-  if(digitalRead(WR_EN) == HIGH) {
-  //if(false) {
+  if (digitalRead(WR_EN) == HIGH) {
+    //if(false) {
     channelValues[color] = switchValues;
     EEPROM.put(colorAddresses[color], switchValues);
   }
@@ -175,5 +178,6 @@ void loop() {
     last_led_write_time = millis();
   }
   readSwitches();
+  delay(500);
   writeToSerial();
 }
