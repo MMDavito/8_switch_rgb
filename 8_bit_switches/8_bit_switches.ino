@@ -178,6 +178,5 @@ void loop() {
     last_led_write_time = millis();
   }
   readSwitches();
-  delay(500);
   writeToSerial();
 }
