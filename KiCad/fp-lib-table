@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SW_Toggle_Blue_wSlots")(type "KiCad")(uri "${KIPRJMOD}/resources/toggle_switch.pretty/switch.pretty/SW_Toggle_Blue_wSlots.pretty")(options "")(descr ""))
+)
