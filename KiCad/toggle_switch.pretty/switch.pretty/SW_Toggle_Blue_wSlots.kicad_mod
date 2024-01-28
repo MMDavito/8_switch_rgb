@@ -68,7 +68,7 @@
   (pad "1" thru_hole oval (at -4.45 0) (size 3.2 5) (drill oval 1 2.3) (layers "*.Cu") (tstamp 0791f65d-cb43-4f07-83ce-41e1d0c56d39))
   (pad "2" thru_hole oval (at 0 0) (size 3.2 5) (drill oval 1 2.3) (layers "*.Cu") (tstamp 9ee4c37a-cdd8-48ed-8881-617e7e18875e))
   (pad "3" thru_hole oval (at 4.45 0) (size 3.2 5) (drill oval 1 2.3) (layers "*.Cu") (tstamp d7f0c104-6d30-4db8-8ed4-ac49c8e225db))
-  (model "${KICAD_USER_3DMOD}/Toggle_SW_Blue_R0.step"
+  (model "${KIPRJMOD}/resources/Toggle_SW_Blue_R0.step"
     (offset (xyz -6.5 4 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 90))
