@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "HDSP-511Y")(type "KiCad")(uri "${KIPRJMOD}/resources/HDSP-511Y/HDSP-511Y.kicad_sym")(options "")(descr ""))
+)
