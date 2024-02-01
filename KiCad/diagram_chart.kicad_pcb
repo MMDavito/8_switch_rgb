@@ -4,7 +4,7 @@
     (thickness 1.6)
   )
 
-  (paper "A3")
+  (paper "A4" portrait)
   (layers
     (0 "F.Cu" signal)
     (31 "B.Cu" signal)
@@ -160,7 +160,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 04f2c6a4-0b0b-404a-9386-b1927a5aafe8)
-    (at 206.022 132.258)
+    (at 91.722 123.358)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -226,7 +226,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 0a440ea3-cf8d-47c9-823d-3b7a29a39bde)
-    (at 216.692 146.208)
+    (at 102.392 137.308)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -284,7 +284,7 @@
 
   (footprint "Crystal:Crystal_HC49-4H_Vertical" (layer "F.Cu")
     (tstamp 0aafeb5f-7e38-40db-a8be-4576619f929e)
-    (at 245.632 143.508)
+    (at 131.332 134.608)
     (descr "Crystal THT HC-49-4H http://5hertz.com/pdfs/04404_D.pdf")
     (tags "THT crystalHC-49-4H")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -350,7 +350,7 @@
 
   (footprint "Fuse:Fuseholder_Clip-5x20mm_Keystone_3512_Inline_P23.62x7.27mm_D1.02x1.57mm_Horizontal" (layer "F.Cu")
     (tstamp 0b277ae4-8579-4211-ac6f-b5e555c16c44)
-    (at 225.122 173.288)
+    (at 110.822 164.388)
     (descr "Fuseholder Clips, 5x20mm Cylinder Fuse, Pins Inline, Horizontal, Keystone 3512, http://www.keyelco.com/product-pdf.cfm?p=356")
     (tags "fuse clip open")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -444,7 +444,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 0fce3d5f-5888-4119-887b-d78cfb62ddf5)
-    (at 218.567 96.52)
+    (at 104.267 87.62)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -523,7 +523,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 1003ec13-3dfa-46b1-94ad-f6a2a80e2d2c)
-    (at 206.022 128.208)
+    (at 91.722 119.308)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -589,7 +589,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 1044d90c-6389-4734-be3f-a2c2f30b9d1b)
-    (at 206.022 144.408)
+    (at 91.722 135.508)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -655,7 +655,7 @@
 
   (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" (layer "F.Cu")
     (tstamp 1467315a-2213-4dc9-bb94-2f8cb0f2efe0)
-    (at 149.86 152.4 -90)
+    (at 35.56 143.5 -90)
     (descr "Terminal Block Phoenix MPT-0,5-2-2.54, 2 pins, pitch 2.54mm, size 5.54x6.2mm^2, drill diamater 1.1mm, pad diameter 2.2mm, see http://www.mouser.com/ds/2/324/ItemDetail_1725656-920552.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
     (tags "THT Terminal Block Phoenix MPT-0,5-2-2.54 pitch 2.54mm size 5.54x6.2mm^2 drill 1.1mm pad 2.2mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -749,7 +749,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp 1c45b906-d414-479a-8d7e-347e7f945091)
-    (at 236.982 136.398)
+    (at 122.682 127.498)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -805,7 +805,7 @@
 
   (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" (layer "F.Cu")
     (tstamp 1cda5a28-535f-4792-a3cd-77f6f8055616)
-    (at 252.192 180.358)
+    (at 137.892 171.458)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.0*1.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 3.0mm width 1.6mm Capacitor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -859,7 +859,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp 224cc623-e09d-4668-8561-0ec55c27aed9)
-    (at 250.19 96.52)
+    (at 135.89 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -915,7 +915,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 269e8277-134c-4535-af09-3035cdca503c)
-    (at 216.692 152.508)
+    (at 102.392 143.608)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -973,7 +973,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp 27c4d5b8-55d1-4877-82cb-ebde400978c6)
-    (at 236.982 113.238)
+    (at 122.682 104.338)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1029,7 +1029,7 @@
 
   (footprint "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" (layer "F.Cu")
     (tstamp 2a7b70a0-70a2-414c-8f5b-8d8bffae618e)
-    (at 206.276801 178.008)
+    (at 91.976801 169.108)
     (descr "CP, Radial series, Radial, pin pitch=2.00mm, , diameter=4mm, Electrolytic Capacitor")
     (tags "CP Radial series Radial pin pitch 2.00mm  diameter 4mm Electrolytic Capacitor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1265,7 +1265,7 @@
 
   (footprint "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" (layer "F.Cu")
     (tstamp 3410b016-27c6-43c7-a04e-6677d94bde43)
-    (at 225.622 180.618)
+    (at 111.322 171.718)
     (descr "Diode, DO-201AD series, Axial, Horizontal, pin pitch=15.24mm, , length*diameter=9.5*5.2mm^2, , http://www.diodes.com/_files/packages/DO-201AD.pdf")
     (tags "Diode DO-201AD series Axial Horizontal pin pitch 15.24mm  length 9.5mm diameter 5.2mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1353,7 +1353,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp 367e2b95-9060-4cce-8cee-6f3c3045ede9)
-    (at 182.499 96.52)
+    (at 68.199 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1409,7 +1409,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 3a42dfc9-ec57-424e-b6cf-e17c297c71ec)
-    (at 206.022 140.358)
+    (at 91.722 131.458)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1475,7 +1475,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp 3b1f8b20-0b7d-4b3f-b5e8-c6c4ae852eb3)
-    (at 241.3 205.11 90)
+    (at 127 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1561,7 +1561,7 @@
 
   (footprint "Package_DIP:DIP-16_W7.62mm_Socket" (layer "F.Cu")
     (tstamp 3ce19f80-08c3-4e77-b613-3ece31b4b69c)
-    (at 248.822 149.408)
+    (at 134.522 140.508)
     (descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1669,7 +1669,7 @@
 
   (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" (layer "F.Cu")
     (tstamp 419339ce-55f3-4c1d-b020-a3af48a5428d)
-    (at 252.192 170.908)
+    (at 137.892 162.008)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.0*1.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 3.0mm width 1.6mm Capacitor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1723,7 +1723,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 4adcc73a-5587-4e39-a8df-c1562b21edf2)
-    (at 206.022 120.108)
+    (at 91.722 111.208)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1789,7 +1789,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 4b3b272a-a8e5-4a87-bae9-f02457ce910d)
-    (at 216.692 136.758)
+    (at 102.392 127.858)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1847,7 +1847,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp 4cd5dad1-dd75-4371-b959-f3c6b4dfa0b3)
-    (at 198.612 181.068)
+    (at 84.312 172.168)
     (descr "Resistor, Axial_DIN0204 series, Axial, Vertical, pin pitch=2.54mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Vertical pin pitch 2.54mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1897,7 +1897,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp 4e5d3ac5-043f-4595-baef-853cc1ca78a7)
-    (at 236.982 130.608)
+    (at 122.682 121.708)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1953,7 +1953,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 4f3012db-cf32-462a-a172-8e2cb3d65665)
-    (at 216.692 117.858)
+    (at 102.392 108.958)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2011,7 +2011,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 5166f4f0-8320-4e7f-8046-6b9a32f55161)
-    (at 216.692 139.908)
+    (at 102.392 131.008)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2069,7 +2069,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp 52271182-117b-43b6-acc1-8ed98c4f6922)
-    (at 198.612 177.918)
+    (at 84.312 169.018)
     (descr "Resistor, Axial_DIN0204 series, Axial, Vertical, pin pitch=2.54mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Vertical pin pitch 2.54mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2119,7 +2119,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp 55c6fff4-292b-40fd-b48a-98875d4648c9)
-    (at 292.1 177.17 90)
+    (at 177.8 168.27 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2205,7 +2205,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 56926f23-e081-4dfe-8046-8c535e14612b)
-    (at 206.022 136.308)
+    (at 91.722 127.408)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2271,7 +2271,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp 6053443a-8fe8-40c2-b91f-56fcaf115363)
-    (at 187.96 205.11 90)
+    (at 73.66 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2357,7 +2357,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 61529259-5428-4fa3-9d7f-c7aede93f7b6)
-    (at 206.022 124.158)
+    (at 91.722 115.258)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2423,7 +2423,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp 64456cd1-214d-45f9-9c55-3265ed119fc8)
-    (at 218.44 205.11 90)
+    (at 104.14 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2509,7 +2509,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 64fec84a-572b-40c3-aa6e-8e2e5c22fa5b)
-    (at 216.692 133.608)
+    (at 102.392 124.708)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2567,7 +2567,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 65156e56-64d3-4702-880a-36aa61e6f589)
-    (at 224.954 74.38)
+    (at 110.654 65.48)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -2646,7 +2646,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp 671dbc69-2d2a-492c-aae6-89b9d535d9b3)
-    (at 208.28 205.11 90)
+    (at 93.98 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2732,7 +2732,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 67c305e5-fdb0-4ff0-91e1-afd1de9294fe)
-    (at 216.692 121.008)
+    (at 102.392 112.108)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2790,7 +2790,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 6a7406e7-31d8-499b-b7b2-f724e669b5b9)
-    (at 206.022 160.608)
+    (at 91.722 151.708)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2856,7 +2856,7 @@
 
   (footprint "Package_DIP:DIP-16_W7.62mm_Socket" (layer "F.Cu")
     (tstamp 724cbd67-ba67-4170-bbee-eb82b534ad80)
-    (at 237.072 149.408)
+    (at 122.772 140.508)
     (descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2964,7 +2964,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp 72eef833-2802-4b31-858b-8a02a5610fd4)
-    (at 198.612 171.618)
+    (at 84.312 162.718)
     (descr "Resistor, Axial_DIN0204 series, Axial, Vertical, pin pitch=2.54mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Vertical pin pitch 2.54mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3014,7 +3014,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 7cccd4a4-e2e9-4398-a848-c8011d025598)
-    (at 212 74.38)
+    (at 97.7 65.48)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -3093,7 +3093,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 81e767c1-864d-4a24-afac-6193665b1b3c)
-    (at 216.692 143.058)
+    (at 102.392 134.158)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3151,7 +3151,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 863a6469-6b09-45ab-a46d-7f5a12f42b25)
-    (at 216.692 124.158)
+    (at 102.392 115.258)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3209,7 +3209,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 877af3c6-8ea0-4a93-bdcf-4bce4d93f4a5)
-    (at 216.692 114.708)
+    (at 102.392 105.808)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3267,7 +3267,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp 88823c1d-7193-43b0-8355-ed2c1ae4d82a)
-    (at 216.692 111.558)
+    (at 102.392 102.658)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3325,7 +3325,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 8cc14748-f690-4316-8cf1-c0a34a6f6fe2)
-    (at 231.6715 96.52)
+    (at 117.3715 87.62)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -3404,7 +3404,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 8fcb0aec-3677-4391-8fe9-9303b092b6dd)
-    (at 237.908 74.38)
+    (at 123.608 65.48)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -3483,7 +3483,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 99d116e7-3bdb-43d1-bca3-8f38b80e6664)
-    (at 206.022 148.458)
+    (at 91.722 139.558)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3549,7 +3549,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp 9b6abed9-cee6-4993-8b57-c42e3d0676bc)
-    (at 206.022 164.658)
+    (at 91.722 155.758)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3615,7 +3615,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp 9bf377e1-1b50-4486-9855-400adf3563d9)
-    (at 273.05 96.52)
+    (at 158.75 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3671,7 +3671,7 @@
 
   (footprint "Button_Switch_THT:SW_PUSH_6mm_H5mm" (layer "F.Cu")
     (tstamp 9f0f3b96-7fe5-4680-9454-06e2cbe10a64)
-    (at 206.472 168.708)
+    (at 92.172 159.808)
     (descr "tactile push button, 6x6mm e.g. PHAP33xx series, height=5mm")
     (tags "tact sw push 6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3753,7 +3753,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp a1d3cdae-1fac-4200-9751-8ad08bea86d8)
-    (at 279.4 177.17 90)
+    (at 165.1 168.27 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3839,7 +3839,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp a3f7f507-6533-472c-ad23-71d4a741b41c)
-    (at 190.119 96.52)
+    (at 75.819 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3895,7 +3895,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp a77e9131-4092-47af-a1c5-4dbc123473c6)
-    (at 216.692 130.458)
+    (at 102.392 121.558)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3953,7 +3953,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp b9732719-ae23-4da9-8c5f-8aacf554b4ba)
-    (at 216.692 127.308)
+    (at 102.392 118.408)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4011,7 +4011,7 @@
 
   (footprint "dc-barrelljacks:BarrelJack_CUI_PJ-102AH_Horizontal" (layer "F.Cu")
     (tstamp ba277a05-6ddc-4ae2-a774-abe970a1073a)
-    (at 157.686 77.088 -90)
+    (at 43.386 68.188 -90)
     (descr "Thin-pin DC Barrel Jack, https://cdn-shop.adafruit.com/datasheets/21mmdcjackDatasheet.pdf")
     (tags "Power Jack")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4104,7 +4104,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp c097dd1b-0a7f-48f2-937e-77bc02739501)
-    (at 251.46 205.11 90)
+    (at 137.16 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4190,7 +4190,7 @@
 
   (footprint "Package_DIP:DIP-16_W7.62mm_Socket" (layer "F.Cu")
     (tstamp c20f1761-bf32-421c-9f22-e6dcd15e81b2)
-    (at 225.322 149.408)
+    (at 111.022 140.508)
     (descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4298,7 +4298,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp c575f810-e671-4d20-9efc-241799c12fa3)
-    (at 160.02 191.13 90)
+    (at 45.72 182.23 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4384,7 +4384,7 @@
 
   (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" (layer "F.Cu")
     (tstamp c6c6e206-9fa9-4b33-9b91-946b0361d82e)
-    (at 252.192 177.208)
+    (at 137.892 168.308)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.0*1.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 3.0mm width 1.6mm Capacitor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4438,7 +4438,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp c7248ca7-814c-40b2-9c49-d6331fc34866)
-    (at 206.022 152.508)
+    (at 91.722 143.608)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4504,7 +4504,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp c8ebe00a-83df-4e1b-9d8b-c5cc7a4eeef2)
-    (at 206.022 116.058)
+    (at 91.722 107.158)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4570,7 +4570,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp d5c05017-40f7-4a0d-b337-8bce68cacd18)
-    (at 236.982 119.028)
+    (at 122.682 110.128)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4626,7 +4626,7 @@
 
   (footprint "Package_DIP:DIP-28_W7.62mm_Socket" (layer "F.Cu")
     (tstamp dc936784-3001-4f0e-9f8c-d07ef5248d73)
-    (at 225.298 112.108)
+    (at 110.998 103.208)
     (descr "28-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4758,7 +4758,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp dd2aba9e-bf68-4cbc-b49f-87dae7b521ed)
-    (at 206.022 156.558)
+    (at 91.722 147.658)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4824,7 +4824,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp e05a21b8-e28b-4a89-8602-dfb70dbf2d8f)
-    (at 257.81 96.52)
+    (at 143.51 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4880,7 +4880,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp e2b3e9ce-6e6c-4910-aabd-0f5e862c7946)
-    (at 198.12 205.11 90)
+    (at 83.82 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4966,7 +4966,7 @@
 
   (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" (layer "F.Cu")
     (tstamp e4d6e589-f874-4830-98d3-960933bd3457)
-    (at 149.86 144.78 -90)
+    (at 35.56 135.88 -90)
     (descr "Terminal Block Phoenix MPT-0,5-2-2.54, 2 pins, pitch 2.54mm, size 5.54x6.2mm^2, drill diamater 1.1mm, pad diameter 2.2mm, see http://www.mouser.com/ds/2/324/ItemDetail_1725656-920552.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
     (tags "THT Terminal Block Phoenix MPT-0,5-2-2.54 pitch 2.54mm size 5.54x6.2mm^2 drill 1.1mm pad 2.2mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5060,7 +5060,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp e63fab63-7b05-4add-9611-45e3561f75c4)
-    (at 236.982 142.188)
+    (at 122.682 133.288)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5116,7 +5116,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp e6898117-a903-4e3a-bc3e-9f29b379a348)
-    (at 197.739 96.52)
+    (at 83.439 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5172,7 +5172,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "F.Cu")
     (tstamp e90f4024-c370-406d-af10-371587f7bf07)
-    (at 206.022 112.008)
+    (at 91.722 103.108)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=7.62mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 7.62mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5238,7 +5238,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tstamp ebebae85-b414-4d7e-bd2c-80c3dc932249)
-    (at 216.692 149.358)
+    (at 102.392 140.458)
     (descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5296,7 +5296,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp ecf19b46-608a-4f34-a5ba-8e8aa68a5699)
-    (at 198.612 174.768)
+    (at 84.312 165.868)
     (descr "Resistor, Axial_DIN0204 series, Axial, Vertical, pin pitch=2.54mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Vertical pin pitch 2.54mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5346,7 +5346,7 @@
 
   (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" (layer "F.Cu")
     (tstamp ed71f36a-d94c-434d-96f5-d4100632c412)
-    (at 149.86 160.02 -90)
+    (at 35.56 151.12 -90)
     (descr "Terminal Block Phoenix MPT-0,5-2-2.54, 2 pins, pitch 2.54mm, size 5.54x6.2mm^2, drill diamater 1.1mm, pad diameter 2.2mm, see http://www.mouser.com/ds/2/324/ItemDetail_1725656-920552.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
     (tags "THT Terminal Block Phoenix MPT-0,5-2-2.54 pitch 2.54mm size 5.54x6.2mm^2 drill 1.1mm pad 2.2mm")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5440,7 +5440,7 @@
 
   (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" (layer "F.Cu")
     (tstamp ee6114f9-2b59-4bc4-bee1-2716af118ea5)
-    (at 252.192 174.058)
+    (at 137.892 165.158)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.0*1.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 3.0mm width 1.6mm Capacitor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5494,7 +5494,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp eff2e3e8-5e1c-4df3-98e2-7bd2b8dea55e)
-    (at 174.879 96.52)
+    (at 60.579 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5550,7 +5550,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp f27ee766-2feb-4e2a-acf4-287389cc84c5)
-    (at 261.62 205.11 90)
+    (at 147.32 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5636,7 +5636,7 @@
 
   (footprint "switch:SW_Toggle_Blue_wSlots" (layer "F.Cu")
     (tstamp f84c77d2-4a52-4a27-a989-8cb20887a2f8)
-    (at 271.78 205.11 90)
+    (at 157.48 196.21 90)
     (descr "SW Toggle")
     (tags "SW Toggle")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5722,7 +5722,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp fe9c1c91-df46-437c-bdf6-76e90dae80f1)
-    (at 265.43 96.52)
+    (at 151.13 87.62)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5778,7 +5778,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp ffc12fce-8fb9-413d-829a-71c22351cecf)
-    (at 236.982 124.818)
+    (at 122.682 115.918)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5832,39 +5832,39 @@
     )
   )
 
-  (gr_rect (start 140.305 59.3) (end 300.305 219.3)
+  (gr_rect (start 26.005 50.4) (end 186.005 210.4)
     (stroke (width 0.05) (type default)) (fill none) (layer "Edge.Cuts") (tstamp b3de8417-ddfb-44c3-8de2-ffb40c0402bf))
   (dimension (type aligned) (layer "Edge.Cuts") (tstamp 115e9636-8344-4a64-9c88-5e094e86c250)
-    (pts (xy 238.1215 106.02) (xy 248.158 106.045))
+    (pts (xy 123.8215 97.12) (xy 133.858 97.145))
     (height -17.530625)
-    (gr_text "10,0365 mm" (at 243.186282 87.351933 359.8572818) (layer "Edge.Cuts") (tstamp 115e9636-8344-4a64-9c88-5e094e86c250)
+    (gr_text "10,0365 mm" (at 128.886282 78.451933 359.8572818) (layer "Edge.Cuts") (tstamp 115e9636-8344-4a64-9c88-5e094e86c250)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
     (style (thickness 0.05) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
   )
   (dimension (type aligned) (layer "Edge.Cuts") (tstamp 6bb45791-bac6-44c2-b6c3-2730cb58f5e9)
-    (pts (xy 212.117 106.02) (xy 202.057 105.918))
+    (pts (xy 97.817 97.12) (xy 87.757 97.018))
     (height 17.192902)
-    (gr_text "10,0605 mm" (at 207.272972 87.627041 -0.580911457) (layer "Edge.Cuts") (tstamp 6bb45791-bac6-44c2-b6c3-2730cb58f5e9)
+    (gr_text "10,0605 mm" (at 92.972972 78.727041 -0.580911457) (layer "Edge.Cuts") (tstamp 6bb45791-bac6-44c2-b6c3-2730cb58f5e9)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
     (style (thickness 0.05) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
   )
   (dimension (type aligned) (layer "Edge.Cuts") (tstamp 7e9c7be0-c02d-47a8-9c0e-cc49cc9b59f7)
-    (pts (xy 237.8715 106.02) (xy 237.8715 96.52))
+    (pts (xy 123.5715 97.12) (xy 123.5715 87.62))
     (height 40.6395)
-    (gr_text "9,5000 mm" (at 277.361 101.27 90) (layer "Edge.Cuts") (tstamp 7e9c7be0-c02d-47a8-9c0e-cc49cc9b59f7)
+    (gr_text "9,5000 mm" (at 163.061 92.37 90) (layer "Edge.Cuts") (tstamp 7e9c7be0-c02d-47a8-9c0e-cc49cc9b59f7)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
     (style (thickness 0.05) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
   )
   (dimension (type aligned) (layer "Edge.Cuts") (tstamp 95e1c190-bd3a-4aab-bd29-746ff7247963)
-    (pts (xy 212.117 106.02) (xy 212.117 96.52))
+    (pts (xy 97.817 97.12) (xy 97.817 87.62))
     (height -39.905)
-    (gr_text "9,5000 mm" (at 171.062 101.27 90) (layer "Edge.Cuts") (tstamp 95e1c190-bd3a-4aab-bd29-746ff7247963)
+    (gr_text "9,5000 mm" (at 56.762 92.37 90) (layer "Edge.Cuts") (tstamp 95e1c190-bd3a-4aab-bd29-746ff7247963)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
