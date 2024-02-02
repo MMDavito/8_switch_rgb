@@ -444,7 +444,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 0fce3d5f-5888-4119-887b-d78cfb62ddf5)
-    (at 104.267 87.62)
+    (at 104.34 86.835)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -749,7 +749,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp 1c45b906-d414-479a-8d7e-347e7f945091)
-    (at 116.85 101.6 -90)
+    (at 116.923 100.815 -90)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -859,7 +859,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp 224cc623-e09d-4668-8561-0ec55c27aed9)
-    (at 134.867 88.89 90)
+    (at 134.94 88.105 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -973,7 +973,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp 27c4d5b8-55d1-4877-82cb-ebde400978c6)
-    (at 63.967 68.62 -90)
+    (at 64.04 67.835 -90)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1353,7 +1353,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp 367e2b95-9060-4cce-8cee-6f3c3045ede9)
-    (at 70.267 88.895 90)
+    (at 70.34 88.11 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -1897,7 +1897,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp 4e5d3ac5-043f-4595-baef-853cc1ca78a7)
-    (at 104.25 101.6 -90)
+    (at 104.323 100.815 -90)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -2567,7 +2567,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 65156e56-64d3-4702-880a-36aa61e6f589)
-    (at 110.567 68.62)
+    (at 110.64 67.835)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -3014,7 +3014,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 7cccd4a4-e2e9-4398-a848-c8011d025598)
-    (at 97.967 68.62)
+    (at 98.04 67.835)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -3325,7 +3325,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 8cc14748-f690-4316-8cf1-c0a34a6f6fe2)
-    (at 116.867 87.62)
+    (at 116.94 86.835)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -3404,7 +3404,7 @@
 
   (footprint "HDSP-511Y:LED_HDSP-511Y" (layer "F.Cu")
     (tstamp 8fcb0aec-3677-4391-8fe9-9303b092b6dd)
-    (at 123.167 68.62)
+    (at 123.24 67.835)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/HDSP-511Y/Broadcom+Limited/view-part/?ref=eda")
     (property "Description" "\nDisplay Modules - LED Character and Numeric Yellow 7-Segment 1 Character Common Anode 2.15V 20mA 0.673 H x 0.488 W x 0.315 D (17.10mm x 12.40mm x 8.00mm) 10-DIP (0.600, 15.24mm)\n")
@@ -3615,7 +3615,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp 9bf377e1-1b50-4486-9855-400adf3563d9)
-    (at 158.867 88.895 90)
+    (at 158.94 88.11 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -3839,7 +3839,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp a3f7f507-6533-472c-ad23-71d4a741b41c)
-    (at 78.267 88.895 90)
+    (at 78.34 88.11 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4570,7 +4570,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp d5c05017-40f7-4a0d-b337-8bce68cacd18)
-    (at 71.967 68.62 -90)
+    (at 72.04 67.835 -90)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -4824,7 +4824,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp e05a21b8-e28b-4a89-8602-dfb70dbf2d8f)
-    (at 142.867 88.895 90)
+    (at 142.94 88.11 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5116,7 +5116,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp e6898117-a903-4e3a-bc3e-9f29b379a348)
-    (at 86.267 88.895 90)
+    (at 86.34 88.11 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5494,7 +5494,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp eff2e3e8-5e1c-4df3-98e2-7bd2b8dea55e)
-    (at 62.267 88.895 90)
+    (at 62.34 88.11 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5722,7 +5722,7 @@
 
   (footprint "LED_THT:LED_D3.0mm" (layer "F.Cu")
     (tstamp fe9c1c91-df46-437c-bdf6-76e90dae80f1)
-    (at 150.867 88.895 90)
+    (at 150.94 88.11 90)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5778,7 +5778,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92_Inline" (layer "F.Cu")
     (tstamp ffc12fce-8fb9-413d-829a-71c22351cecf)
-    (at 79.967 68.62 -90)
+    (at 80.04 67.835 -90)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (property "Sheetfile" "diagram_chart.kicad_sch")
@@ -5834,15 +5834,6 @@
 
   (gr_rect (start 40.64 50.8) (end 180.64 190.8)
     (stroke (width 0.05) (type default)) (fill none) (layer "Edge.Cuts") (tstamp b3de8417-ddfb-44c3-8de2-ffb40c0402bf))
-  (dimension (type aligned) (layer "Edge.Cuts") (tstamp 13213f92-6e1b-461d-a122-7322e69fe508)
-    (pts (xy 104.267 87.62) (xy 86.267 87.625))
-    (height -21.75526)
-    (gr_text "18,0000 mm" (at 95.272724 108.227759 0.0159154939) (layer "Edge.Cuts") (tstamp 13213f92-6e1b-461d-a122-7322e69fe508)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
-    (style (thickness 0.05) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
-  )
   (dimension (type aligned) (layer "Edge.Cuts") (tstamp afb74615-b3fb-4cd2-ba78-150c2f411d5d)
     (pts (xy -107.472 38.972) (xy -37.472 38.972))
     (height 175.26)
@@ -5862,28 +5853,73 @@
     (style (thickness 0.05) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
   )
 
-  (segment (start 63.967 71.16) (end 79.967 71.16) (width 1) (layer "F.Cu") (net 4) (tstamp 36df3d9c-457e-47ab-9889-2d85112da6d2))
-  (segment (start 104.25 104.14) (end 116.85 104.14) (width 1) (layer "F.Cu") (net 4) (tstamp 54cddba7-c5da-4151-8e18-ade57609269a))
-  (segment (start 63.967 68.62) (end 67.987 64.6) (width 0.2) (layer "F.Cu") (net 14) (tstamp 5f20d4d9-b2a6-4f49-ae31-eadf9425dfa8))
-  (segment (start 67.987 64.6) (end 94.367 64.6) (width 0.2) (layer "F.Cu") (net 14) (tstamp 67c902ec-b853-471e-bb1e-cd89b27669d3))
-  (segment (start 94.367 64.6) (end 97.967 61) (width 0.2) (layer "F.Cu") (net 14) (tstamp d88748a2-664b-47b6-9928-c5721e29edce))
-  (segment (start 97.967 61) (end 97.967 76.24) (width 0.2) (layer "B.Cu") (net 14) (tstamp 2ad866a0-962d-4d11-917d-1e14356cdd42))
-  (segment (start 71.967 68.62) (end 73.38 68.62) (width 0.2) (layer "F.Cu") (net 15) (tstamp 61b6ca1c-6755-4b3b-9a14-9cb1890cd617))
-  (segment (start 73.38 68.62) (end 77 65) (width 0.2) (layer "F.Cu") (net 15) (tstamp 83570ce6-b3ad-4a9e-a2e9-a2db592a2334))
-  (segment (start 77 65) (end 106.567 65) (width 0.2) (layer "F.Cu") (net 15) (tstamp b224b4eb-d885-4001-bb0c-a329c65d3ed6))
-  (segment (start 106.567 65) (end 110.567 61) (width 0.2) (layer "F.Cu") (net 15) (tstamp b4c4fa1e-621d-4435-abc3-564d0160ba78))
-  (segment (start 110.567 61) (end 110.567 76.24) (width 0.2) (layer "B.Cu") (net 15) (tstamp bca6bb24-166b-46b1-bec3-746b4221e70c))
-  (segment (start 123.167 67.5) (end 123.167 61) (width 0.2) (layer "F.Cu") (net 16) (tstamp 134e317c-10a7-4044-925d-d5325e051d0d))
-  (segment (start 123.167 76.24) (end 123.167 67.5) (width 0.2) (layer "F.Cu") (net 16) (tstamp 34565ceb-7ef6-4cb0-988b-79fc22d4b315))
-  (segment (start 122.88 68.62) (end 123.167 68.333) (width 0.2) (layer "F.Cu") (net 16) (tstamp 36d5b7ed-1512-4e72-9344-a7c1d53ddc69))
-  (segment (start 79.967 68.62) (end 122.88 68.62) (width 0.2) (layer "F.Cu") (net 16) (tstamp b346c33f-4ddf-43db-8f19-4ca1e9704f62))
-  (segment (start 123.167 68.333) (end 123.167 67.5) (width 0.2) (layer "F.Cu") (net 16) (tstamp d92572bd-1d82-4850-9db8-3408c9305e8b))
-  (segment (start 104.267 95.24) (end 104.267 80) (width 0.2) (layer "F.Cu") (net 18) (tstamp 0bb94185-a839-45af-b77d-fb9be0caac74))
-  (segment (start 104.25 95.257) (end 104.267 95.24) (width 0.2) (layer "F.Cu") (net 18) (tstamp 6caf19da-6315-4269-a20e-ffe383a7c56a))
-  (segment (start 104.14 95.367) (end 104.267 95.24) (width 0.2) (layer "F.Cu") (net 18) (tstamp 8493a0f7-0a3d-4a68-9a1a-8628f54f6231))
-  (segment (start 104.25 101.6) (end 104.25 95.257) (width 0.2) (layer "F.Cu") (net 18) (tstamp d6e094f0-519b-417c-8168-1afe3dda7d03))
-  (segment (start 116.85 95.257) (end 116.867 95.24) (width 0.2) (layer "F.Cu") (net 19) (tstamp 07dbe91e-9db4-47ee-bcda-8d7b07757e81))
-  (segment (start 116.867 95.24) (end 116.867 80) (width 0.2) (layer "F.Cu") (net 19) (tstamp 8fd8724b-4748-45e6-8385-9385114e02ae))
-  (segment (start 116.85 101.6) (end 116.85 95.257) (width 0.2) (layer "F.Cu") (net 19) (tstamp b8b7612d-52fb-4b0c-9c6f-ef83875aa6eb))
+  (segment (start 64.04 70.375) (end 80.04 70.375) (width 1) (layer "F.Cu") (net 4) (tstamp 36df3d9c-457e-47ab-9889-2d85112da6d2))
+  (segment (start 104.323 103.355) (end 116.923 103.355) (width 1) (layer "F.Cu") (net 4) (tstamp 54cddba7-c5da-4151-8e18-ade57609269a))
+  (segment (start 64.04 67.835) (end 68.06 63.815) (width 0.2) (layer "F.Cu") (net 14) (tstamp 5f20d4d9-b2a6-4f49-ae31-eadf9425dfa8))
+  (segment (start 68.06 63.815) (end 94.44 63.815) (width 0.2) (layer "F.Cu") (net 14) (tstamp 67c902ec-b853-471e-bb1e-cd89b27669d3))
+  (segment (start 94.44 63.815) (end 98.04 60.215) (width 0.2) (layer "F.Cu") (net 14) (tstamp d88748a2-664b-47b6-9928-c5721e29edce))
+  (segment (start 98.04 60.215) (end 98.04 75.455) (width 0.2) (layer "B.Cu") (net 14) (tstamp 2ad866a0-962d-4d11-917d-1e14356cdd42))
+  (segment (start 72.04 67.835) (end 73.453 67.835) (width 0.2) (layer "F.Cu") (net 15) (tstamp 61b6ca1c-6755-4b3b-9a14-9cb1890cd617))
+  (segment (start 73.453 67.835) (end 77.073 64.215) (width 0.2) (layer "F.Cu") (net 15) (tstamp 83570ce6-b3ad-4a9e-a2e9-a2db592a2334))
+  (segment (start 77.073 64.215) (end 106.64 64.215) (width 0.2) (layer "F.Cu") (net 15) (tstamp b224b4eb-d885-4001-bb0c-a329c65d3ed6))
+  (segment (start 106.64 64.215) (end 110.64 60.215) (width 0.2) (layer "F.Cu") (net 15) (tstamp b4c4fa1e-621d-4435-abc3-564d0160ba78))
+  (segment (start 110.64 60.215) (end 110.64 75.455) (width 0.2) (layer "B.Cu") (net 15) (tstamp bca6bb24-166b-46b1-bec3-746b4221e70c))
+  (segment (start 123.24 66.715) (end 123.24 60.215) (width 0.2) (layer "F.Cu") (net 16) (tstamp 134e317c-10a7-4044-925d-d5325e051d0d))
+  (segment (start 123.24 75.455) (end 123.24 66.715) (width 0.2) (layer "F.Cu") (net 16) (tstamp 34565ceb-7ef6-4cb0-988b-79fc22d4b315))
+  (segment (start 122.953 67.835) (end 123.24 67.548) (width 0.2) (layer "F.Cu") (net 16) (tstamp 36d5b7ed-1512-4e72-9344-a7c1d53ddc69))
+  (segment (start 80.04 67.835) (end 122.953 67.835) (width 0.2) (layer "F.Cu") (net 16) (tstamp b346c33f-4ddf-43db-8f19-4ca1e9704f62))
+  (segment (start 123.24 67.548) (end 123.24 66.715) (width 0.2) (layer "F.Cu") (net 16) (tstamp d92572bd-1d82-4850-9db8-3408c9305e8b))
+  (segment (start 104.34 94.455) (end 104.34 79.215) (width 0.2) (layer "F.Cu") (net 18) (tstamp 0bb94185-a839-45af-b77d-fb9be0caac74))
+  (segment (start 104.323 94.472) (end 104.34 94.455) (width 0.2) (layer "F.Cu") (net 18) (tstamp 6caf19da-6315-4269-a20e-ffe383a7c56a))
+  (segment (start 104.213 94.582) (end 104.34 94.455) (width 0.2) (layer "F.Cu") (net 18) (tstamp 8493a0f7-0a3d-4a68-9a1a-8628f54f6231))
+  (segment (start 104.323 100.815) (end 104.323 94.472) (width 0.2) (layer "F.Cu") (net 18) (tstamp d6e094f0-519b-417c-8168-1afe3dda7d03))
+  (segment (start 116.923 94.472) (end 116.94 94.455) (width 0.2) (layer "F.Cu") (net 19) (tstamp 07dbe91e-9db4-47ee-bcda-8d7b07757e81))
+  (segment (start 116.94 94.455) (end 116.94 79.215) (width 0.2) (layer "F.Cu") (net 19) (tstamp 8fd8724b-4748-45e6-8385-9385114e02ae))
+  (segment (start 116.923 100.815) (end 116.923 94.472) (width 0.2) (layer "F.Cu") (net 19) (tstamp b8b7612d-52fb-4b0c-9c6f-ef83875aa6eb))
 
+  (group "" (id 771167f2-abf4-4a47-94f9-7a3b7cf5e204)
+    (members
+      07dbe91e-9db4-47ee-bcda-8d7b07757e81
+      0bb94185-a839-45af-b77d-fb9be0caac74
+      0fce3d5f-5888-4119-887b-d78cfb62ddf5
+      134e317c-10a7-4044-925d-d5325e051d0d
+      1c45b906-d414-479a-8d7e-347e7f945091
+      224cc623-e09d-4668-8561-0ec55c27aed9
+      27c4d5b8-55d1-4877-82cb-ebde400978c6
+      2ad866a0-962d-4d11-917d-1e14356cdd42
+      34565ceb-7ef6-4cb0-988b-79fc22d4b315
+      367e2b95-9060-4cce-8cee-6f3c3045ede9
+      36d5b7ed-1512-4e72-9344-a7c1d53ddc69
+      36df3d9c-457e-47ab-9889-2d85112da6d2
+      4e5d3ac5-043f-4595-baef-853cc1ca78a7
+      54cddba7-c5da-4151-8e18-ade57609269a
+      5f20d4d9-b2a6-4f49-ae31-eadf9425dfa8
+      61b6ca1c-6755-4b3b-9a14-9cb1890cd617
+      65156e56-64d3-4702-880a-36aa61e6f589
+      67c902ec-b853-471e-bb1e-cd89b27669d3
+      6caf19da-6315-4269-a20e-ffe383a7c56a
+      7cccd4a4-e2e9-4398-a848-c8011d025598
+      83570ce6-b3ad-4a9e-a2e9-a2db592a2334
+      8493a0f7-0a3d-4a68-9a1a-8628f54f6231
+      8cc14748-f690-4316-8cf1-c0a34a6f6fe2
+      8fcb0aec-3677-4391-8fe9-9303b092b6dd
+      8fd8724b-4748-45e6-8385-9385114e02ae
+      9bf377e1-1b50-4486-9855-400adf3563d9
+      a3f7f507-6533-472c-ad23-71d4a741b41c
+      b224b4eb-d885-4001-bb0c-a329c65d3ed6
+      b346c33f-4ddf-43db-8f19-4ca1e9704f62
+      b4c4fa1e-621d-4435-abc3-564d0160ba78
+      b8b7612d-52fb-4b0c-9c6f-ef83875aa6eb
+      bca6bb24-166b-46b1-bec3-746b4221e70c
+      d5c05017-40f7-4a0d-b337-8bce68cacd18
+      d6e094f0-519b-417c-8168-1afe3dda7d03
+      d88748a2-664b-47b6-9928-c5721e29edce
+      d92572bd-1d82-4850-9db8-3408c9305e8b
+      e05a21b8-e28b-4a89-8602-dfb70dbf2d8f
+      e6898117-a903-4e3a-bc3e-9f29b379a348
+      eff2e3e8-5e1c-4df3-98e2-7bd2b8dea55e
+      fe9c1c91-df46-437c-bdf6-76e90dae80f1
+      ffc12fce-8fb9-413d-829a-71c22351cecf
+    )
+  )
 )
