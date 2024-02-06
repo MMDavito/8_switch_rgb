@@ -31,9 +31,9 @@
     (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 6f38f0ee-6d2a-4b7f-ac84-6edd7b65b930))
   (fp_line (start 4.1 2.6) (end -4.1 2.6)
     (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 330e2efd-96e4-4b62-be41-2039bca951c7))
-  (pad "1" thru_hole oval (at -2.5 0) (size 1.5 2.5) (drill oval 0.8 1.8) (layers "*.Cu") (tstamp 0791f65d-cb43-4f07-83ce-41e1d0c56d39))
-  (pad "2" thru_hole oval (at 0 0) (size 1.5 2.5) (drill oval 0.8 1.8) (layers "*.Cu") (tstamp a712611a-4275-4bb8-a12b-78367867e6e5))
-  (pad "3" thru_hole oval (at 2.5 0) (size 1.5 2.5) (drill oval 0.8 1.9) (layers "*.Cu") (tstamp 9ca12b93-0557-4a66-b6a4-dd6dcc8275b4))
+  (pad "1" thru_hole oval (at -2.5 0) (size 1.5 2.5) (drill oval 0.8 1.8) (layers "*.Cu" "*.Mask") (tstamp 0791f65d-cb43-4f07-83ce-41e1d0c56d39))
+  (pad "2" thru_hole oval (at 0 0) (size 1.5 2.5) (drill oval 0.8 1.8) (layers "*.Cu" "*.Mask") (tstamp a712611a-4275-4bb8-a12b-78367867e6e5))
+  (pad "3" thru_hole oval (at 2.5 0) (size 1.5 2.5) (drill oval 0.8 1.9) (layers "*.Cu" "*.Mask") (tstamp 9ca12b93-0557-4a66-b6a4-dd6dcc8275b4))
   (model "${KIPRJMOD}/resources/Toggle_SW_Blue_R0.step"
     (offset (xyz -4 2.5 0))
     (scale (xyz 0.6667 0.6308 0.77))
