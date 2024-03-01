@@ -36,4 +36,9 @@
   (pad "1" thru_hole oval (at -2.4 0.3) (size 1.5 2.5) (drill oval 0.8 1.8) (layers "*.Cu" "*.Mask") (tstamp 70f2ad4c-3cde-4184-9c05-15b329fe9bf8))
   (pad "2" thru_hole oval (at 0.1 0.3) (size 1.5 2.5) (drill oval 0.8 1.8) (layers "*.Cu" "*.Mask") (tstamp 021551b8-665c-4708-9b02-e8022d4e280f))
   (pad "3" thru_hole oval (at 2.6 0.3) (size 1.5 2.5) (drill oval 0.8 1.9) (layers "*.Cu" "*.Mask") (tstamp 6853439a-23e4-412f-ad64-da9b040534c5))
+  (model "C:/Users/david/repos/7_seg/8_switch_rgb/KiCad/resources/Toggle_SW_Blue_R0.step"
+    (offset (xyz -4 2.5 0))
+    (scale (xyz 0.6667 0.6308 0.77))
+    (rotate (xyz 0 0 90))
+  )
 )
