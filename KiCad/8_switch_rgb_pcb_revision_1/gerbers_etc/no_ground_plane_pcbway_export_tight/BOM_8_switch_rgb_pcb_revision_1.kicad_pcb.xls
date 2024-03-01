@@ -1,0 +1,34 @@
+﻿designator,quantity,value,pack,mpn,mount_type
+", , , , , , , , , , , , ",13,,,,tht
+"C1, C2",2,22pF,C_Disc_D3.0mm_W1.6mm_P2.50mm,,tht
+"CU_BUTTONS1, C_DRAIN0, C_TERM_GND0, C_TERM_GND1, C_TERM_VCC0, C_TERM_VCC1, C_TRANS1",7,100nF,C_Disc_D5.0mm_W2.5mm_P5.00mm,,tht
+C_MCU1,1,10μF,CP_Radial_D4.0mm_P2.00mm,,tht
+"D0, D1, D2, D3, D4, D5, D6, D7",8,LED,LED_D3.0mm,,tht
+DC-In1,1,Barrel_Jack_Switch_Pin3Ring,BarrelJack_CUI_PJ-102AH_Horizontal,,tht
+MCU_1,1,ATmega328P-P,DIP-28_W7.62mm_Socket,,tht
+"PWR_Screw1, RGB1, RGB2, Serial_Screw1",4,Screw Terminal,"TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal",,tht
+"R1, R13, R19, R2, R3, R4",6,1KΩ,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,,tht
+"R10, R11, R12, R20, R21, R5, R6, R7, R8, R9",10,330Ω,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,,tht
+"R14, R15, R17, R24, R25, R26, R27, R28, R29, R30, R31, R32, R33, R34",14,10kΩ,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,,tht
+"R16, R22, R36",3,100kΩ,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,,tht
+"R18, R40, R41, R42, R43, R44, R45, R46",8,33Ω,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,,tht
+"R23, R35, R37, R38",4,0Ω,R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical,,tht
+R39,1,0Ω,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,,tht
+SW0,1,SW0,SW_Toggle_Small,,tht
+SW1,1,SW1,SW_Toggle_Small,,tht
+SW2,1,SW2,SW_Toggle_Small,,tht
+SW3,1,SW3,SW_Toggle_Small,,tht
+SW4,1,SW4,SW_Toggle_Small,,tht
+SW5,1,SW5,SW_Toggle_Small,,tht
+SW6,1,SW6,SW_Toggle_Small,,tht
+SW7,1,SW7,SW_Toggle_Small,,tht
+SW_Mem1,1,SW__MEM,SW_Toggle_Small,,tht
+SW_N1,1,NXT_BTN,SW_PUSH_6mm_H5mm,,tht
+SW_Serr1,1,SW__Serr,SW_Toggle_Small,,tht
+SW__WR1,1,SW__WR,SW_Toggle_Small,,tht
+"T_DEC_0, T_DEC_1, T_DEC_2, T_HEX_0, T_HEX_1, T_LED1",6,2N3904,TO-92_Inline,,tht
+U2,1,74HC165,DIP-16_W7.62mm_Socket,,tht
+U_Drain1,1,TPIC6C595,DIP-16_W7.62mm_Socket,,tht
+U_Trans1,1,74HC595,DIP-16_W7.62mm_Socket,,tht
+Y1,1,16MHz,Crystal_HC49-4H_Vertical,,tht
+"decimal_0, decimal_1, decimal_2, hex_0, hex_1",5,HDSP-511Y,LED_HDSP-511Y,,tht
