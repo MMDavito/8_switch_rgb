@@ -55,7 +55,23 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|113355001|102650001|8ee0c5cc-eea7-4f6c-9608-cbb883fc7b2e|ad26776d-99d0-4433-a1a0-7da14ad788c0",
+        "courtyards_overlap|146414999|102050001|8e20c388-5f3f-4d56-9149-af5bfbc63c03|ad26776d-99d0-4433-a1a0-7da14ad788c0",
+        "courtyards_overlap|148359999|118800001|c134c5e4-0aa2-44d3-a72f-0e327127124f|ea46df41-1636-4b5e-8a38-23f6b0b266fd",
+        "lib_footprint_issues|117525000|113760000|16e1f980-4a25-480e-b435-e0f1907ec76a|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|135305000|113760000|ea0746c7-1e32-4953-a17a-22c4ab1a61dd|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|137845000|113760000|ebca1440-df06-413e-b817-58f7d2968b16|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|140385000|113760000|bf6ea30e-7a10-4a2c-aaf6-c05ee6388632|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|142925000|113760000|c26abded-471f-4a82-a2f5-da9e2799c95b|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|158470000|133100000|948daca2-8473-4396-8e76-081168e66795|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|158470000|135640000|e2f7b844-e982-4ec4-ac85-50fd50b6d678|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|198265000|104700000|942d158d-06e2-42a2-a3a8-e4c47910da8f|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|198340000|117780000|c82c3c35-ed2e-4118-b0f1-77ccdff3f6ba|00000000-0000-0000-0000-000000000000",
+        "starved_thermal|132765000|111220000|75ef7c90-7328-4e7f-a89b-89cfa01ff141|21d85d67-7750-4dd2-81f7-09c5a1620f23|B.Cu",
+        "starved_thermal|203880000|92040000|75ef7c90-7328-4e7f-a89b-89cfa01ff141|980ffb9b-6009-4ea5-a6d8-e796fccddd71|B.Cu",
+        "starved_thermal|203880000|98160000|75ef7c90-7328-4e7f-a89b-89cfa01ff141|980ffb9b-6009-4ea5-a6d8-e796fccddd71|B.Cu"
+      ],
       "meta": {
         "version": 2
       },
@@ -431,7 +447,9 @@
     "meta": {
       "version": 3
     },
-    "net_colors": null,
+    "net_colors": {
+      "GND": "rgb(72, 255, 85)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": []
   },
