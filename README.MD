@@ -17,6 +17,7 @@
 - [4 Programming and bootloading:](#4-programming-and-bootloading)
   - [4.1 Bootloading:](#41-bootloading)
   - [4.2 Programming:](#42-programming)
+  - [4.3 Programing the MCU for PCB Revision 1:](#43-programing-the-mcu-for-pcb-revision-1)
 
 ________________
 
@@ -104,3 +105,7 @@ Until I find the time for creating that PCB I here bellow attach a picture compa
 
 I later attached the prototype-board to a piece of plywood to make it even more robust.
 ![Programmer breadboard vs prototype-board](images/programmer_breadboard_vs_prototype.jpg)
+
+## 4.3 Programing the MCU for PCB Revision 1:
+Using above instructions, load this sketch onto the MCU:
+https://github.com/MMDavito/8_switch_rgb/blob/master/troubleshooting_and_revision_1/2024-03-07_8_switch_rgb_pcb_rev1/8_switch_rgb_rev_1_master_control/8_switch_rgb_rev_1_master_control.ino
