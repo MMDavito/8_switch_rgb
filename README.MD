@@ -20,19 +20,18 @@ ________________
 
 # 1.1 Introduction:
 This project was created to teach my niece the wonders of electicity and programming.
-Here is a video trying to explain the process that made me go from 64 bit memory board to a "space-machine":<br>
-https://youtu.be/f2jGDhYTRMw?si=Nl4C3-mujgaeUpWO
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f2jGDhYTRMw?si=Nl4C3-mujgaeUpWO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Here is a video trying to give and project overview and explain the process that made me go from 64 bit memory board to a "space-machine":<br>
+[![8 Switch RGB project overview and presentation](https://img.youtube.com/vi/f2jGDhYTRMw/0.jpg)](https://www.youtube.com/watch?v=f2jGDhYTRMw)
 
 # 1.2 Demonstration: 
 ## 1.2.1 English:
-Using Revision 0:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hgyK7DbGRng?si=22Wnq2zwAcgr64p7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Using Revision 0:<br>
+[![English demonstration revision 0](https://img.youtube.com/vi/hgyK7DbGRng/0.jpg)](https://www.youtube.com/watch?v=hgyK7DbGRng)
+
 
 ## 1.2.1 Swedish:
 Better quality than the english one, using PCB revision 1:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zpn5mNTmlIY?si=fGFSKCtGoQ4AWESo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Swedish demonstration revision 1](https://img.youtube.com/vi/zpn5mNTmlIY/0.jpg)](https://www.youtube.com/watch?v=zpn5mNTmlIY)
 
 ___________
 # 2 Design and process:
@@ -45,8 +44,7 @@ The only major differences between the two schematics are that I have a filter o
 I also left-out the fuse and some other things in order to conserve space.
 #### 2.2.1.1 PCB rev0
 Will not publish Gerbers because this version should never ever be built or produced, as can be viewed in this 30 second clip:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f2jGDhYTRMw?si=5OCrlvThz0RvP0Xv&amp;clip=UgkxvULYqhLVdSH0bBzPMFzRGHbVHcaSfia2&amp;clipt=EOqpSBjBhEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+[![Clip showing the horror of revision 0](./images/thumbnail_clip_rev0.png)](https://www.youtube.com/clip/UgkxvULYqhLVdSH0bBzPMFzRGHbVHcaSfia2)
 ![alt text](images/schematic_revision_0.png)
 
 #### 2.2.1.2 PCB rev1
