@@ -2,11 +2,6 @@
 #include <EEPROM.h>
 #include <FastLED.h>
 #define NUM_LEDS 5
-/*
-  #define MOSI 11
-  #define MISO 12 //74hc165
-  #define SCK 13
-*/
 
 #define BUTTON 3 //5
 #define SW_MEM 6 //12
@@ -16,7 +11,7 @@
 #define SW_WR A4 //27
 #define SW_SERR A5 //28
 */
-//More erogonomic order (mostly relevant when using it as a calculator):
+//More ergonomic order (mostly relevant when using it as a calculator):
 #define SW_SERR A4 //27
 #define SW_WR A5 //28
 
@@ -26,25 +21,21 @@
 #define RCK_TRANS 9 //15
 #define RGB1_PIN 4//6
 
-/*
-  SPISettings Settings165( 16000000, LSBFIRST, SPI_MODE3);
-  SPISettings Settings595( 16000000, LSBFIRST, SPI_MODE3);
-*/
 volatile bool isDebug = false;
 volatile bool isOff = false; //if SW_WR is true when SW_SERR has been toggled before turning off, EEPROM 5.
 volatile bool isCounter = false;
-const byte eepromOff = 5;//EEPROM address of above boolean.
+const byte eepromOff = 5; //EEPROM address of above boolean.
 bool isBlackout = false;
 
 volatile unsigned long lastCount = 0;
 volatile unsigned long updateInterval = 100;
 
-// Define the array of leds
+// Define the array of LEDs
 CRGB leds[NUM_LEDS];
 
-volatile byte color = 0;//r,g,b,NO color
-const byte colorAddresses[] = {1, 2, 3, 4};//Addresses for EEPROM/rgb; NONE
-byte channelValues[] = {0b10000000, 0b10000000, 0b10000000, 0b00000000};//RGB; NONE
+volatile byte color = 0; //r,g,b,NO color
+const byte colorAddresses[] = {1, 2, 3, 4}; //Addresses for EEPROM/rgb; NONE
+byte channelValues[] = {0b10000000, 0b10000000, 0b10000000, 0b00000000}; //RGB; NONE
 
 const byte customChars[] = {
   B11111100, // 0
@@ -65,7 +56,7 @@ const byte customChars[] = {
   B10001110  // f
 };
 /*
-  //Logic order output adresses:
+  //Logic order output addresses:
   const byte outputs[6]  =
   {
   0b10000000,
@@ -106,12 +97,6 @@ volatile byte switchValues = 0b10000000;
 unsigned long button_time = 0;
 unsigned long last_button_time = 0;
 
-/*
-  unsigned long led_write_time = 0;
-  volatile unsigned long last_led_write_time = 0;
-*/
-
-//int buttonState = 0;  // variable for reading the pushbutton status
 volatile unsigned long buttonTime = 0;
 volatile unsigned long lastButtonActive = 0;
 volatile bool buttonToggled = false;
@@ -222,14 +207,16 @@ byte charToByte(char ch) {
     } else {
       value = ch - 'A' + 10; // Convert hex char to numerical value (A-F: 10-15)
     }
-    return value; // Shift left by 4 bits
-    //return value << 4; // Shift left by 4 bits
+    return value;
+    //return value << 4; // Shift left by 4 bits (No idea why I would want to?)
   } else {
     // Return 0 for invalid characters
     return 0;
   }
 }
-
+/*
+  Given a value this will change the different arrays so their values are representative for later use.
+*/
 void setOutputValues(byte value) {
   // Convert to decimal string manually
   String strValue = String(value);
@@ -254,7 +241,9 @@ void setOutputValues(byte value) {
   outputValues[5] = value;
 }
 
-
+/*
+  Sets the decimal displays to display "OFF", all other displays are black/empty.
+*/
 void setOutputValuesOff() {
   // Convert to decimal string manually
   String strValue = "0FF";
@@ -272,15 +261,14 @@ void setOutputValuesOff() {
 }
 
 /**
-   Reads inputs from 74hc165
+  Reads inputs from 74hc165
 */
 byte readInputs() {
   digitalWrite(RCK_INPUT, LOW);
   digitalWrite(RCK_INPUT, HIGH);
   //asm("nop\n nop\n");              //some delay
 
-  byte switches = SPI.transfer(0); //get the position
-  //digitalWrite(RCK_INPUT, HIGH);
+  byte switches = SPI.transfer(0); //get the switches states
   switchValues = switches;
   return switches;
 }
@@ -293,10 +281,10 @@ void setup() {
   //Serial.begin(115200);//WORKS
   //Serial.begin(1000000);//Works
   Serial.begin(2000000);//Works
-  //Initilize EEPROM if not initilized, else read from EEPROM
-  byte initilized = EEPROM.read(0);
-  //byte initilized = 0xFF;
-  if (initilized > 0) {
+  //Initilize EEPROM if not initialized, else read from EEPROM
+  byte initialized = EEPROM.read(0);
+  //byte initialized = 0xFF;
+  if (initialized > 0) {
     EEPROM.write(0, 0);
     for (int i = 0; i < 4; i++) {
       EEPROM.write(colorAddresses[i], channelValues[i]);
@@ -314,9 +302,7 @@ void setup() {
   SPI.begin();
 
   //SPI.setDataMode(SPI_MODE0); // default - don't need
-  SPI.setBitOrder(LSBFIRST); // MSBFIRST is default - leave out in that case
-  //SPI.setClockDivider(SPI_CLOCK_DIV128); // why so slow?  might as well use shiftout()
-  // HC595 and TPIC6B595 work just fine at default speed (4 MHz)
+  SPI.setBitOrder(LSBFIRST); // MSBFIRST is default - comment out if determined as needed.
 
   pinMode(BUTTON, INPUT);
   pinMode(SW_MEM, INPUT);
@@ -328,11 +314,7 @@ void setup() {
   pinMode(RCK_OUTPUT, OUTPUT);
   pinMode(RCK_TRANS, OUTPUT);
 
-
-  digitalWrite(OUTPUT_ENABLE, HIGH);
-  //digitalWrite(RCK_INPUT, HIGH);//RCK_INPUT high IS MORE UNSTABLE.
-  //Could test 100k pulldown if high never works, but that is a later issue.
-
+  digitalWrite(OUTPUT_ENABLE, HIGH);  
   digitalWrite(RCK_INPUT, HIGH);
   digitalWrite(RCK_OUTPUT, HIGH);
   digitalWrite(RCK_TRANS, HIGH);
@@ -359,8 +341,8 @@ void regularMode() {
   if (digitalRead(SW_WR) == HIGH && inputs != channelValues[color]) {
     channelValues[color] = inputs;
     // Could use a array and only write if the value actually changed.
-    //Memory is only rated for 100k cycles.
-    //Note: This function uses EEPROM.update() to perform the write, so does not rewrites the value if it didn't change.
+    // Memory is only rated for 100k cycles.
+    // Note: This function uses EEPROM.update() to perform the write, so does not rewrites the value if it didn't change.
     EEPROM.put(colorAddresses[color], inputs);
     setLedColors();
   }
@@ -374,17 +356,6 @@ void regularMode() {
   }
 
   if (isDebug) {
-    Serial.print("Counter: ");
-    //printByte(counter);
-    printByte(inputs);
-    Serial.println('\n');
-
-    Serial.println("___________________");
-    Serial.print("Counter is: ");
-    //Serial.println(counter);
-    Serial.println(inputs);
-
-
     for (int i = 0; i < 6; i++)
     {
       Serial.print("Output: ");
@@ -428,7 +399,6 @@ void blackoutMode() {
     }
   }
   delay(100);
-  //delay(updateInterval);
 }
 void counterMode() {
   if (digitalRead(SW_MEM) != HIGH || digitalRead(SW_SERR) != HIGH) {
@@ -495,7 +465,7 @@ void loop() {
       //Turn on the LEDS in accordance with this mode.
       isBlackout = true;
       blackoutMode();
-      //Wait until next cycle to do the other ones?
+      //Wait until next cycle to check the other ones? (Decided not to for some reason)
       //return;
     }
     if (digitalRead(SW_MEM)) isCounter = true;
