@@ -17,12 +17,12 @@
 - [4 Programming and bootloading:](#4-programming-and-bootloading)
   - [4.1 Bootloading:](#41-bootloading)
   - [4.2 Programming:](#42-programming)
-  - [4.3 Programing the MCU for PCB Revision 1:](#43-programing-the-mcu-for-pcb-revision-1)
+  - [4.3 Programming the MCU for PCB Revision 1:](#43-programming-the-mcu-for-pcb-revision-1)
 
 ________________
 
 # 1.1 Introduction:
-This project was created to teach my niece the wonders of electicity and programming.
+This project was created to teach my niece the wonders of electricity and programming.
 Here is a video trying to give and project overview and explain the process that made me go from 64 bit memory board to a "space-machine":<br>
 [![8 Switch RGB project overview and presentation](https://img.youtube.com/vi/f2jGDhYTRMw/0.jpg)](https://www.youtube.com/watch?v=f2jGDhYTRMw)
 
@@ -42,7 +42,7 @@ ___________
 No real design was put in here since the issues needing solving where clearly limited and modular in its nature, the process I choose was to solve issues limited in scope and carry out experiments with components in as modular of a manner as possible.
 This is how the original prototype described in the video above ended up containing 3 ATmega-328's.
 
-This approach did however result in many .ino files and duplicate code. The descision I made was to keep all of them; this will allow me to return 5-10 years from now and realize my process of thinking and working has changed and how, maybe I will write a book or blogpost about it. 
+This approach did however result in many .ino files and duplicate code. The decision I made was to keep all of them; this will allow me to return 5-10 years from now and realize my process of thinking and working has changed and how, maybe I will write a book or blog-post about it. 
 
 ## 2.2 KiCad
 ### 2.2.1 Schematics and details:
@@ -56,7 +56,7 @@ Will not publish Gerbers because this version should never ever be built or prod
 ![PCB revision 0 PCB 3D view](images/rev0_PCB_3dView.png)
 
 #### 2.2.1.2 PCB rev1
-Gerbers availible for order in this directory:
+Gerbers available for order in this directory:
 https://github.com/MMDavito/8_switch_rgb/tree/master/KiCad/8_switch_rgb_pcb_revision_1/gerber_to_order
 ![PCB revision 1 Schematic](images/8_switch_rgb_rev1_schematic.svg)
 ![PCB revision 1 PCB 3D view](images/rev1_3D_With_GND_PLANE.png)
@@ -83,14 +83,14 @@ ____________
 Will be covered in a later update somewhere before June 2024.
 _____________
 # 4 Programming and bootloading:
-I used this library to allow me to install bootloader and program the attiny https://github.com/MCUdude/MiniCore
+I used this library to allow me to install bootloader and program the ATmega https://github.com/MCUdude/MiniCore
 ## 4.1 Bootloading:
-To get the atmega328 become programeable one needs to install a bootloader to it:<br><br>
+To get the ATmega328 become programmable one needs to install a bootloader to it:<br><br>
 Here is the instruction I used: https://www.instructables.com/How-to-Burn-the-Arduino-BootLoader-on-to-a-AtMega3/
 
 Here is a alternative version: https://www.instructables.com/Burning-the-Bootloader-on-ATMega328-using-Arduino-/
 
-In future I might adjust the board I have made from a prototype-board or order a PCB that allow me to not need a arduino UNO connected with dupont-wires to install the bootloader to the atmega-328.
+In future I might adjust the board I have made from a prototype-board or order a PCB that allow me to not need a arduino UNO connected with dupont-wires to install the bootloader to the ATmega-328.
 
 ## 4.2 Programming:
 Somehow I managed to program the board using diagrams and information found on this page:
@@ -99,13 +99,13 @@ https://www.instructables.com/USB-to-Serial-TTL-Adapter-to-Program-ATmega328p/
 And this video: 
 https://youtu.be/tiETAwkxnmw?si=Nhqw3l6RTYwrkvaB
 
-Skiming through above links I realize that neither really shows my process of programming the MCUs, and I should probably order a PCB and create a project to detail this.
+Skimming through above links I realize that neither really shows my process of programming the MCUs, and I should probably order a PCB and create a project to detail this.
 
 Until I find the time for creating that PCB I here bellow attach a picture comparing the breadboard vs with the soldered prototype one.
 
 I later attached the prototype-board to a piece of plywood to make it even more robust.
 ![Programmer breadboard vs prototype-board](images/programmer_breadboard_vs_prototype.jpg)
 
-## 4.3 Programing the MCU for PCB Revision 1:
+## 4.3 Programming the MCU for PCB Revision 1:
 Using above instructions, load this sketch onto the MCU:
 https://github.com/MMDavito/8_switch_rgb/blob/master/troubleshooting_and_revision_1/2024-03-07_8_switch_rgb_pcb_rev1/8_switch_rgb_rev_1_master_control/8_switch_rgb_rev_1_master_control.ino
