@@ -43,23 +43,14 @@ Since I want to keep the failings as remindments of my ability to solve and carr
 
 ## 3.1 Mounting Frame
 To help increaseing the speed of soldering the PCB, and more importantly, to hold the LEDs and toggle-switches straight I created this frame/holder:
-STL ordered: 
-https://github.com/MMDavito/8_switch_rgb/blob/master/FreeCad/assembling_tools/7_seg_rev1_100mm_mounting_frame.stl
+[STL ordered: ](./assembling_tools/7_seg_rev1_100mm_mounting_frame.stl)
 ![Mounting Frame](images/assembling_tools/7_seg_rev1_mounting_frame.png)
 
 ## 3.2 Resistor Lead Bender:
-
-*TODO REWRITEWWWWW*
-
-
 Since I use both 1/4 watt and 1/8 watt resistors with shortest minimal hole distance I am forced to insert the lead one at a time, and then use a needle nose plyer to tighten them to the board.
 
 This approach will leave unecessarily long leads when soldering, since with the frame described in section 3.1 I no longer need them to be long to be held in place.
 
-Instead I will cut them to length (maybe useing a 3d printed part not yet created) and then bend them. But this requires me a frame to help me bend them 90 degrees. I therefore created this Resistor Lead Bender, to allow me to bend the leads of 16 resistors at a time flush to their verry TOODODODODOO NAME CORE:
-** INSERT PICTURE
-
-** INSERT LINKS 
-
-
-
+Instead I will cut them to length (maybe using a 3d printed part not yet created) and then bend them. But this requires me a frame to help me bend them 90 degrees. I therefore created [this Resistor Lead Bender](./assembling_tools/lead_bending/resistor_bending_tool_ver_1_rev0-BodyPocket.stl), to allow me to bend the leads of 16 resistors at a time flush to the case of the resistors:
+![Resistor Lead Bender](images/assembling_tools/lead_bending_tool.png)
+This tool is tall enough to bend the standard resistor leads without needing to cut the leads to length until one has mounted and soldered them.
