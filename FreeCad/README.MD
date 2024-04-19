@@ -2,12 +2,14 @@
 - [Table of contents:](#table-of-contents)
 - [1 Introduction:](#1-introduction)
 - [2 Holders:](#2-holders)
-  - [2.1 The legacy from pcb revision 1:](#21-the-legacy-from-pcb-revision-1)
+  - [2.1 The legacy from pcb revision 0:](#21-the-legacy-from-pcb-revision-0)
   - [2.2 The final version for pcb revision 1](#22-the-final-version-for-pcb-revision-1)
   - [2.3 The holder to display the failings of revision 0:](#23-the-holder-to-display-the-failings-of-revision-0)
 - [3 Assembly Tools:](#3-assembly-tools)
-  - [3.1 Mounting Frame](#31-mounting-frame)
+  - [3.1 Mounting Frame:](#31-mounting-frame)
   - [3.2 Resistor Lead Bender:](#32-resistor-lead-bender)
+  - [3.3 Template to mark drill-holes:](#33-template-to-mark-drill-holes)
+  - [3.4 LED-matrix holder:](#34-led-matrix-holder)
 
 __________
 # 1 Introduction:
@@ -18,8 +20,8 @@ The pocket in question is a hexagon constrained by a circle with the diameter 6.
 ![hexagon constrained by 6.5mm diameter circle](images/holders/m3_constrained_by_circle.png)
 
 # 2 Holders:
-## 2.1 The legacy from pcb revision 1:
-Since the first version of the PCB (revision 0) proved to not work very well, and revision 1 being 100x100mm instead of 120x120mm in size I needed something to make the holders I had built and painted useable for revision 1.
+## 2.1 The legacy from pcb revision 0:
+Since the first version of the PCB (revision 0) proved to not work very well, and revision 1 being 100x100mm instead of 120x120mm in size I needed something to make the holders/stand I had built and painted useable for revision 1.
 
 Like mentioned in the introduction the first holder was to be mounted above a hole made in the first version of the plywood holders, so it needed to have a flat mounting outside that 100x100mm hole that was there to provide clearance for the 120x120mm pcb_rev0. Therefore this versions baseplate is 150x150mm in size, which is larger than the 100x100mm needed for revision 1:
 ![150mm with walls](images/holders/revision_1_with_walls.png)
@@ -41,8 +43,8 @@ Since I want to keep the failings as reminders of my ability to carry on and bri
 [The STL](./holders/2024-03-13_order/holder_120mm-SquareCorners_10mm.stl) and [the CAD](./holders/legacy/holder_120mm.FCStd).
 # 3 Assembly Tools:
 
-## 3.1 Mounting Frame
-To help increaseing the speed of soldering the PCB, and more importantly, to hold the LEDs and toggle-switches straight I created this frame/holder:
+## 3.1 Mounting Frame:
+To help increasing the speed of soldering the PCB, and more importantly, to hold the LEDs and toggle-switches straight I created this frame/holder:
 [STL ordered: ](./assembling_tools/7_seg_rev1_100mm_mounting_frame.stl)
 ![Mounting Frame](images/assembling_tools/7_seg_rev1_mounting_frame.png)
 
@@ -54,3 +56,21 @@ This approach will leave unnecessarily long leads when soldering, since with the
 Instead I will cut them to length (maybe using a 3d printed part not yet created) and then bend them. But this requires me a frame to help me bend them 90 degrees. I therefore created [this Resistor Lead Bender](./assembling_tools/lead_bending/resistor_bending_tool_ver_1_rev0-BodyPocket.stl), to allow me to bend the leads of 16 resistors at a time flush to the case of the resistors:
 ![Resistor Lead Bender](images/assembling_tools/lead_bending_tool.png)
 This tool is tall enough to bend the standard resistor leads without needing to cut the leads to length until one has mounted and soldered them.
+
+## 3.3 Template to mark drill-holes:
+To make it more easy to drill holes consistent with the spacing of the LED-strip I had at hand (ws2812b 60 LED/meter), I made a matrix of 5 x 5 2 mm holes (2.5mm would been better), and 3mm holes for screws/nuts holding it in place of the previous line of holes made; allowing scaling infinitely to any direction allowing any size of LED-matrix, be that 1x15, 2x3 etc. 
+
+![Led matrix, drill-frame](images/assembling_tools/led_matrix_drill_frame.png)
+[Freecad file](./assembling_tools/led_matrix_drill_frame.FCStd), and the [STL](./assembling_tools/led_matrix_drill_frame-BodyPad.stl)
+
+Here is a example of how to use it to mark drill-holes:
+https://www.youtube.com/watch?v=ce8ECqhq-No&t=2s
+
+## 3.4 LED-matrix holder:
+To sync with the drill holes created from the markers made using the tool from [3.3 Template to mark drill-holes](#33-template-to-mark-drill-holes) the LED matrix holder was created, to allow for attachment to a surface in a way that aligned with holes made on another surface.
+![LED-matrix Holder](./images/assembling_tools/led_matrix_holder.png)
+
+Freecad file is available [here](./assembling_tools/led_matrix_holder_version2.FCStd) and the [STL here](./assembling_tools/led_matrix_holder_version2-BodyPad.stl)
+
+Video explaining how this is used and how a vacuum-cleaner helps solving this useability can be found in this offset:ed video:
+[!["Video-segment detailing how to use the LED-matrix-holder"](./images/assembling_tools/thumbnail_led_matrix_holder.png)](https://www.youtube.com/watch?v=ce8ECqhq-No&t=713s)

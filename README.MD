@@ -14,6 +14,8 @@
     - [2.2.3 Custom Footprint 7-segment Display:](#223-custom-footprint-7-segment-display)
   - [2.3 FreeCAD](#23-freecad)
 - [3 Assembly:](#3-assembly)
+  - [3.1 Assembly of frame/stand:](#31-assembly-of-framestand)
+  - [3.2 Assembly of the PCB](#32-assembly-of-the-pcb)
 - [4 Programming and bootloading:](#4-programming-and-bootloading)
   - [4.1 Bootloading:](#41-bootloading)
   - [4.2 Programming:](#42-programming)
@@ -80,6 +82,11 @@ This process and designs are detailed in this readme:
 https://github.com/MMDavito/8_switch_rgb/tree/master/FreeCad/README.MD
 ____________
 # 3 Assembly:
+## 3.1 Assembly of frame/stand:
+More clear information and details about the 3d-printed parts found in the following video can be found in [this readme](./FreeCad/README.MD), section [3.3](./FreeCad/README.MD#33-template-to-mark-drill-holes) and [3.4](./FreeCad/README.MD#34-led-matrix-holder).<br>
+[![Assembling stand to hold the PCB](https://img.youtube.com/vi/ce8ECqhq-No/0.jpg)](https://youtu.be/ce8ECqhq-No)
+
+## 3.2 Assembly of the PCB
 Will be covered in a later update somewhere before June 2024.
 _____________
 # 4 Programming and bootloading:
