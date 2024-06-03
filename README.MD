@@ -87,7 +87,7 @@ More clear information and details about the 3d-printed parts found in the follo
 [![Assembling stand to hold the PCB](https://img.youtube.com/vi/ce8ECqhq-No/0.jpg)](https://youtu.be/ce8ECqhq-No)
 
 ## 3.2 Assembly of the PCB
-Will be covered in a later update somewhere before June 2024.
+Will be covered in a later update somewhere between June-August 2024.
 _____________
 # 4 Programming and bootloading:
 I used this library to allow me to install bootloader and program the ATmega https://github.com/MCUdude/MiniCore
