@@ -1,3 +1,5 @@
+//Note this is obsolete and superseeded by rev-1!
+
 //void ICACHE_RAM_ATTR buttonClick();
 #include <EEPROM.h>
 #include <FastLED.h>

@@ -6,10 +6,10 @@
 #define BUTTON 3 //5
 #define SW_MEM 6 //12
 /*
- //Correct order:
- 
-#define SW_WR A4 //27
-#define SW_SERR A5 //28
+  //Correct order:
+
+  #define SW_WR A4 //27
+  #define SW_SERR A5 //28
 */
 //More ergonomic order (mostly relevant when using it as a calculator):
 #define SW_SERR A4 //27
@@ -22,11 +22,11 @@
 #define RGB1_PIN 4//6
 
 const bool isDebug = false;
-// If LED-strip is letting Current and Signal pass Right to Left instead of Left to Right: 
-const bool IsLedsReversed = true; 
+// If LED-strip is letting Current and Signal pass Right to Left instead of Left to Right:
+const bool isLedsReversed = true;
 
 //if SW_WR is HIGH when SW_SERR has been HIGH, Non-Volatile: EEPROM 5.
-volatile bool IsOff = false; 
+volatile bool isOff = false;
 const byte eepromOff = 5; //EEPROM address of above boolean.
 
 volatile bool isCounter = false;
@@ -184,12 +184,22 @@ void setLedColors() {
     }
   }
   else {
-    leds[0] = selectedColor();
-    leds[1] = CRGB(channelValues[0], 0, 0);
-    leds[2] = CRGB(0, channelValues[1], 0);
-    leds[3] = CRGB(0, 0, channelValues[2]);
+    if (isLedsReversed) {
+      leds[4] = selectedColor();
+      leds[3] = CRGB(channelValues[0], 0, 0);
+      leds[2] = CRGB(0, channelValues[1], 0);
+      leds[1] = CRGB(0, 0, channelValues[2]);
 
-    leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
+      leds[0] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
+    }
+    else {
+      leds[0] = selectedColor();
+      leds[1] = CRGB(channelValues[0], 0, 0);
+      leds[2] = CRGB(0, channelValues[1], 0);
+      leds[3] = CRGB(0, 0, channelValues[2]);
+
+      leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
+    }
   }
   FastLED.show();
 }
@@ -278,14 +288,11 @@ byte readInputs() {
   return switches;
 }
 
-
-
-
 void setup() {
-  //Serial.begin(9600);
   //Serial.begin(115200);//WORKS
   //Serial.begin(1000000);//Works
   Serial.begin(2000000);//Works
+
   //Initilize EEPROM if not initialized, else read from EEPROM
   byte initialized = EEPROM.read(0);
   //byte initialized = 0xFF;
@@ -319,7 +326,7 @@ void setup() {
   pinMode(RCK_OUTPUT, OUTPUT);
   pinMode(RCK_TRANS, OUTPUT);
 
-  digitalWrite(OUTPUT_ENABLE, HIGH);  
+  digitalWrite(OUTPUT_ENABLE, HIGH);
   digitalWrite(RCK_INPUT, HIGH);
   digitalWrite(RCK_OUTPUT, HIGH);
   digitalWrite(RCK_TRANS, HIGH);
@@ -329,7 +336,6 @@ void setup() {
   setLedColors();
   delay(100);
 }
-
 
 void regularMode() {
   if (digitalRead(BUTTON) == HIGH) {
