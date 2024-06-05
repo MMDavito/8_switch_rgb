@@ -14,18 +14,23 @@
 //More ergonomic order (mostly relevant when using it as a calculator):
 #define SW_SERR A4 //27
 #define SW_WR A5 //28
-
+/**/
 #define OUTPUT_ENABLE 2 //4
 #define RCK_INPUT 7 //13
 #define RCK_OUTPUT 8 //14
 #define RCK_TRANS 9 //15
 #define RGB1_PIN 4//6
 
-volatile bool isDebug = false;
-volatile bool isOff = false; //if SW_WR is true when SW_SERR has been toggled before turning off, EEPROM 5.
-volatile bool isCounter = false;
+const bool isDebug = false;
+// If LED-strip is letting Current and Signal pass Right to Left instead of Left to Right: 
+const bool IsLedsReversed = true; 
+
+//if SW_WR is HIGH when SW_SERR has been HIGH, Non-Volatile: EEPROM 5.
+volatile bool IsOff = false; 
 const byte eepromOff = 5; //EEPROM address of above boolean.
-bool isBlackout = false;
+
+volatile bool isCounter = false;
+volatile bool isBlackout = false;
 
 volatile unsigned long lastCount = 0;
 volatile unsigned long updateInterval = 100;
@@ -34,8 +39,8 @@ volatile unsigned long updateInterval = 100;
 CRGB leds[NUM_LEDS];
 
 volatile byte color = 0; //r,g,b,NO color
-const byte colorAddresses[] = {1, 2, 3, 4}; //Addresses for EEPROM/rgb; NONE
-byte channelValues[] = {0b10000000, 0b10000000, 0b10000000, 0b00000000}; //RGB; NONE
+const byte colorAddresses[] = {1, 2, 3, 4}; //Addresses for EEPROM/R,G,B; NONE
+volatile byte channelValues[] = {0b10000000, 0b10000000, 0b10000000, 0b00000000}; //R,G,B; NONE
 
 const byte customChars[] = {
   B11111100, // 0
@@ -68,7 +73,6 @@ const byte customChars[] = {
   };
 */
 //Actual order output addresses:
-
 const byte outputs[6]  =
 {
   0b00100000,
@@ -78,7 +82,7 @@ const byte outputs[6]  =
   0b00001000,
   0b00000100,
 };
-
+/**/
 
 volatile byte outputValues[6] = {
   0b11000000,
@@ -94,12 +98,13 @@ volatile byte counter = 0x00;
 
 volatile byte switchValues = 0b10000000;
 
-unsigned long button_time = 0;
-unsigned long last_button_time = 0;
+volatile unsigned long button_time = 0;
+volatile unsigned long last_button_time = 0;
 
 volatile unsigned long buttonTime = 0;
 volatile unsigned long lastButtonActive = 0;
 volatile bool buttonToggled = false;
+
 void buttonHigh() {
   if (buttonTime == 0) {
     buttonTime = millis();
