@@ -465,10 +465,14 @@ void loop() {
       digitalWrite(RCK_OUTPUT, HIGH);
       digitalWrite(RCK_TRANS, HIGH);
       digitalWrite(OUTPUT_ENABLE, LOW);
-
-      delayMicroseconds(100);
-      //delay(100)
+      if (i < 3 || i > 4) {
+        //SuperRed 7-segment (or simple blue LED)
+        delayMicroseconds(25);
+      } else {
+        delayMicroseconds(100);
+      }
     }
+    //delay(100)
   }
   digitalWrite(OUTPUT_ENABLE, HIGH);
   if (digitalRead(SW_SERR)) {
