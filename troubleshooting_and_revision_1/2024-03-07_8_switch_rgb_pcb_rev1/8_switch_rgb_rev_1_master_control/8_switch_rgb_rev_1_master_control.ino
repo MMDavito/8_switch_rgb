@@ -1,7 +1,13 @@
+/*
+ * Future refactor may want to take this into account:
+ * https://github.com/FastLED/FastLED/wiki/Multiple-Controller-Examples#managing-your-own-output
+ */
+
 #include <SPI.h>
 #include <EEPROM.h>
 #include <FastLED.h>
 #define NUM_LEDS 5
+#define NUM_LEDS_RGB2 4
 
 #define BUTTON 3 //5
 #define SW_MEM 6 //12
@@ -19,7 +25,8 @@
 #define RCK_INPUT 7 //13
 #define RCK_OUTPUT 8 //14
 #define RCK_TRANS 9 //15
-#define RGB1_PIN 4//6
+#define RGB1_PIN 4 //6
+#define RGB2_PIN 5 //11
 
 const bool isDebug = false;
 // If LED-strip is letting Current and Signal pass Right to Left instead of Left to Right:
@@ -35,8 +42,11 @@ volatile bool isBlackout = false;
 volatile unsigned long lastCount = 0;
 volatile unsigned long updateInterval = 100;
 
-// Define the array of LEDs
+// Define the array of LEDs for the primary output
 CRGB leds[NUM_LEDS];
+// Define the array of LEDs for the secondary output
+//This will only be written to on "blackout"
+CRGB leds_rgb2[NUM_LEDS_RGB2];
 
 volatile byte color = 0; //r,g,b,NO color
 const byte colorAddresses[] = {1, 2, 3, 4}; //Addresses for EEPROM/R,G,B; NONE
@@ -201,6 +211,11 @@ void setLedColors() {
       leds[4] = CRGB(channelValues[0], channelValues[1], channelValues[2]);
     }
   }
+  leds_rgb2 [0] = leds[0];
+  leds_rgb2 [1] = leds[1];
+  leds_rgb2 [2] = leds[2];
+  leds_rgb2 [3] = leds[3];
+  
   FastLED.show();
 }
 
@@ -332,6 +347,7 @@ void setup() {
   digitalWrite(RCK_TRANS, HIGH);
 
   FastLED.addLeds<WS2812B, RGB1_PIN, GRB>(leds, NUM_LEDS);  // GRB ordering is typical
+  FastLED.addLeds<WS2812B, RGB2_PIN, GRB>(leds_rgb2, NUM_LEDS_RGB2);  // GRB ordering is typical
 
   setLedColors();
   delay(100);
