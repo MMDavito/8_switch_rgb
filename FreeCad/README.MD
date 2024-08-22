@@ -38,17 +38,20 @@ So the version I ordered for the final version is instead meant to be mounted in
 The STL can be downloaded [here](./holders/2024-03-13_order/holder_100mm_12mm_plywood.stl). My use of measures and notation hint at how little I bothered to perfect my understanding of freecad; but I argue that one only needs to open [this file](./holders/Holder%20100mm.FCStd) and one can print any type of measurements at any time, this is one of the strength of opensource.
 
 ## 2.3 The holder to display the failings of revision 0:
+[The STL](./holders/2024-03-13_order/holder_120mm-SquareCorners_10mm.stl) and [the CAD](./holders/legacy/holder_120mm.FCStd).<br>
 Since I want to keep the failings as reminders of my ability to carry on and bring solutions, I also made a holder for the 120x120mm PCB revision 0 for mounting onto walls or holders/displays:
 ![holder for 120mm revision0](images/holders/120mm_rev0_display_only.png)
-[The STL](./holders/2024-03-13_order/holder_120mm-SquareCorners_10mm.stl) and [the CAD](./holders/legacy/holder_120mm.FCStd).
+
 # 3 Assembly Tools:
 
 ## 3.1 Mounting Frame:
-To help increasing the speed of soldering the PCB, and more importantly, to hold the LEDs and toggle-switches straight I created this frame/holder:
-[STL ordered: ](./assembling_tools/7_seg_rev1_100mm_mounting_frame.stl)
+[Video](https://youtu.be/1DfmUe_ZbE0?si=A3hDy3otQbanwX06&t=17)<br>
+To help increasing the speed of soldering the PCB, and more importantly, to hold the LEDs and toggle-switches straight I created this frame/holder:<br>
+[STL ordered](./assembling_tools/7_seg_rev1_100mm_mounting_frame.stl)
 ![Mounting Frame](images/assembling_tools/7_seg_rev1_mounting_frame.png)
 
 ## 3.2 Resistor Lead Bender:
+[Video](https://youtu.be/1DfmUe_ZbE0?si=84JAirYSgrXgPCBK&t=103)<br>
 Since I use both 1/4 watt and 1/8 watt resistors with shortest minimal hole distance I am forced to insert the lead one at a time, and then use a needle nose plier to tighten them to the board.
 
 This approach will leave unnecessarily long leads when soldering, since with the frame described in section 3.1 I no longer need them to be long to be held in place.
@@ -58,13 +61,10 @@ Instead I will cut them to length (maybe using a 3d printed part not yet created
 This tool is tall enough to bend the standard resistor leads without needing to cut the leads to length until one has mounted and soldered them.
 
 ## 3.3 Template to mark drill-holes:
-To make it more easy to drill holes consistent with the spacing of the LED-strip I had at hand (ws2812b 60 LED/meter), I made a matrix of 5 x 5 2 mm holes (2.5mm would been better), and 3mm holes for screws/nuts holding it in place of the previous line of holes made; allowing scaling infinitely to any direction allowing any size of LED-matrix, be that 1x15, 2x3 etc. 
-
-![Led matrix, drill-frame](images/assembling_tools/led_matrix_drill_frame.png)
+[Video](https://youtu.be/ce8ECqhq-No?si=jgb1d80NxuUq9T-k&t=2)<br>
+To make it more easy to drill holes consistent with the spacing of the LED-strip I had at hand (ws2812b 60 LED/meter), I made a matrix of 5 x 5 2 mm holes (2.5mm would been better), and 3mm holes for screws/nuts holding it in place of the previous line of holes made; allowing scaling infinitely to any direction allowing any size of LED-matrix, be that 1x15, 2x3 etc. <br>
 [Freecad file](./assembling_tools/led_matrix_drill_frame.FCStd), and the [STL](./assembling_tools/led_matrix_drill_frame-BodyPad.stl)
-
-Here is a example of how to use it to mark drill-holes:
-https://www.youtube.com/watch?v=ce8ECqhq-No&t=2s
+![Led matrix, drill-frame](images/assembling_tools/led_matrix_drill_frame.png)
 
 ## 3.4 LED-matrix holder:
 To sync with the drill holes created from the markers made using the tool from [3.3 Template to mark drill-holes](#33-template-to-mark-drill-holes) the LED matrix holder was created, to allow for attachment to a surface in a way that aligned with holes made on another surface.
