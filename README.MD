@@ -15,7 +15,7 @@
   - [2.3 FreeCAD](#23-freecad)
 - [3 Assembly:](#3-assembly)
   - [3.1 Assembly of frame/stand:](#31-assembly-of-framestand)
-  - [3.2 Assembly of the PCB](#32-assembly-of-the-pcb)
+  - [3.2 Assembly/soldering of the PCB](#32-assemblysoldering-of-the-pcb)
 - [4 Programming and bootloading:](#4-programming-and-bootloading)
   - [4.1 Bootloading:](#41-bootloading)
   - [4.2 Programming:](#42-programming)
@@ -86,7 +86,7 @@ ____________
 More clear information and details about the 3d-printed parts found in the following video can be found in [this readme](./FreeCad/README.MD), section [3.3](./FreeCad/README.MD#33-template-to-mark-drill-holes) and [3.4](./FreeCad/README.MD#34-led-matrix-holder).<br>
 [![Assembling stand to hold the PCB](https://img.youtube.com/vi/ce8ECqhq-No/0.jpg)](https://youtu.be/ce8ECqhq-No)
 
-## 3.2 Assembly of the PCB
+## 3.2 Assembly/soldering of the PCB
 [![Assembling and soldering the PCB](https://img.youtube.com/vi/1DfmUe_ZbE0/0.jpg)](https://youtu.be/1DfmUe_ZbE0)
 _____________
 # 4 Programming and bootloading:
