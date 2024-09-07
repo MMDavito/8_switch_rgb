@@ -16,6 +16,8 @@
 - [3 Assembly:](#3-assembly)
   - [3.1 Assembly of frame/stand:](#31-assembly-of-framestand)
   - [3.2 Assembly/soldering of the PCB](#32-assemblysoldering-of-the-pcb)
+    - [3.2.1 Resistors required:](#321-resistors-required)
+    - [3.2.2 Order of assembly:](#322-order-of-assembly)
 - [4 Programming and bootloading:](#4-programming-and-bootloading)
   - [4.1 Bootloading:](#41-bootloading)
   - [4.2 Programming:](#42-programming)
@@ -88,6 +90,27 @@ More clear information and details about the 3d-printed parts found in the follo
 
 ## 3.2 Assembly/soldering of the PCB
 [![Assembling and soldering the PCB](https://img.youtube.com/vi/1DfmUe_ZbE0/0.jpg)](https://youtu.be/1DfmUe_ZbE0)
+
+### 3.2.1 Resistors required:
+__1/8 watt resistors:__
+* 10kΩ * 14
+* 33Ω * 8
+  
+__1/4 watt resistors:__
+* 330Ω * 2
+* 220Ω * 8
+* 1kΩ * 6
+
+### 3.2.2 Order of assembly:
+1. Small resistors (1/8 watt).
+2. Big resistors (1/4 watt).
+3. 3mm LED:s.
+4. Transistors.
+5. DIL-holders.
+6. Toggle switches.
+7. 7-segment displays.
+8. DC-plug & screw-terminals.
+9. Push-button, crystal & capacitors.
 _____________
 # 4 Programming and bootloading:
 I used this library to allow me to install bootloader and program the ATmega https://github.com/MCUdude/MiniCore
